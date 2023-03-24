@@ -92,4 +92,4 @@ function start(file) {
 }
 
 start('main.js')
-require("http").createServer((_, res) => res.end("ZYKO BOTZ MD")).listen(8080)
+require("http").createServer((_, res) => res.end("ZYKO BOTZ MD")).listen(8980)
