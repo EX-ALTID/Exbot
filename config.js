@@ -1,11 +1,12 @@
 // s c r i p t  o r i  b y  aldi lesmana🔭
-// ditulis ulang oleh ZYKO MD
+// ditulis ulang oleh ZYKO MD and recode by Exalt
 // credits, jangan dihapus atau diubah!
 
 // - - thanks to - -
 // • allah swt
 // • wh mods dev
 // • ZYKO MD 
+// • Exalt
 // • dll
 
 //[!] jangan lupa ganti ownernya
@@ -44,73 +45,69 @@ const readMore = more.repeat(4001)
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
 
-global.sgh = 'https://github.com/ZykoBotz-MD'
-global.sgc = 'https://chat.whatsapp.com/INq67rkTp8iAwiVvLOFAYH'
-global.sdc = 'https://www.discord.com'
-global.snh = 'https://youtu.be/E1Cb97Rb-8U'
-global.sfb = 'https://www.facebook.com/' 
-global.syt = 'https://www.youtube.com/@ZykoBotzMD'
-global.tik = 'https://www.tiktok.com/@lisaamelia09_' 
-global.tautanwa = 'https://wa.me/message/CXI3LHFLC6NON1'
-global.wame = 'https://wa.me/message/CXI3LHFLC6NON1' // kalau gk punya bisa ganti pake gini wa.me/6283133329293
+global.sgh = 'https://github.com/EX-ALTID'
+global.sgc = 'https://chat.whatsapp.com/CwD4GdX4No1HH0gFnuCZYY'
+global.sdc = 'https://discord.gg/vvAJj62e'
+global.snh = 'https://youtube.com'
+global.sfb = 'https://www.facebook.com/cybor.love' 
+global.syt = 'https://www.youtube.com'
+global.tik = 'https://www.tiktok.com/miskawatydihuma' 
+global.tautanwa = 'https://wa.me/6289637252247'
+global.wame = 'https://wa.me/6289637252247' // kalau gk punya bisa ganti pake gini wa.me/6283133329293
 
 /*============== PAYMENT ==============*/
-global.pdana = '0852 1264 9276'
-global.povo = '0852 1264 9276'
-global.pgopay = '0852 1264 9276'
-global.plinkaja = '0852 1264 9276' 
-global.ppulsa = '0852 1264 9276'
-global.ppulsa2 = '0831 3332 9293'
+global.pdana = '0821 1896 9778'
+global.povo = '-'
+global.pgopay = '-'
+global.plinkaja = '-' 
+global.ppulsa = '0821 1896 9778'
+global.ppulsa2 = '021 1896 9778'
 global.psaweria = '-'
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6282124690625'
-global.nomorown = '6283133329293'
-global.nomorown1 = '6283133329293' //pake No Pacar lo Juga Boleh
-global.namebot = 'ZYKOBOTZ MD'
-global.nameown = 'ZYKO MD'
-global.nameown1 = 'LISA AMELIA' //Pake Nama Pacar Lo Juga Boleh
+global.nomorbot = '6289637252247'
+global.nomorown = '6289637252247'
+global.nomorown1 = '6289637252247'
+global.namebot = 'Ex-Botz'
+global.nameown = 'Exalt'
+global.nameown1 = 'Ex-Alt'
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ INFO BIO DATA OWN ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.sig = '📷 ɪɴsᴛᴀɢʀᴀᴍ : https://instagram.com/kabulsaputra21' // ig lo
-global.sigpcr = '📷 ɪɴsᴛᴀɢʀᴀᴍ : https://instagram.com/lisaamelia8680' // ig cewek lo
+global.sig = '📷 ɪɴsᴛᴀɢʀᴀᴍ : https://instagram.com/miskawatydihuma' // ig lo
+global.sigpcr = '📷 ɪɴsᴛᴀɢʀᴀᴍ : https://instagram.com/miskawatydihuma'
 /*============== Github Thanks To ==============*/
-global.namagithub = 'Nama Github Belum Diisi' // nama github lu
-// klau kgk ada github kasih tanda '-' aja biar kgk error
+global.namagithub = 'EXALTID' // nama github
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['6283133329293', 'ZYKO MD', true],
+  ['6289637252247', 'Exalt', true],
   ['-', 'ISI KALAU ADA', true],
   ['-', 'ISI KALAU ADA', true],
   ['-', 'ISI KALAU ADA', true],
   ['-', 'ISI KALAU ADA', true]
 //Ganti jd nomormu sama Namamu
 ] 
-global.mods = [] 
+global.mods = ['6289637252247', 'Exalt', true] 
 global.prems = [] 
 
 /*============== WATERMARK ==============*/
-global.gcname = 'ZYKOBOTZ MD' //nama group kalian
+global.gcname = 'Ex-Bot' //nama group kalian
 global.readMore = readMore
-global.wm = '                「 ZYKOBOTZ MD 」'
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘ZYKOBOTZ MD ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ ZYKOBOTZ MD '
-global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
-global.bottime = `T I M E : ${wktuwib}`
-global.titlebot = `⫹⫺ WhatsApp Bot | By ZYKO MD`
+global.wm = '                「 ⫷◍ eX-Bot ◍⫸ 」'
+global.wm2 = '                   ༺Ex-Alt༻'
+global.wm3 = '              ⫷◎⑅ Ex-Alt ⑅◍⫸'
+global.botdate = `⌨ Waktu: ${week} ${date}\n🕜 𝗧𝗶𝗺𝗲: ${wktuwib}`
+global.bottime = `🕑T I M E : ${wktuwib}`
+global.titlebot = `❁ WhatsApp Bot | By Ex-Alt A.K.A  ☛ D a N e`
 global.packname = '☂︎ ᴄʀᴇᴀᴛᴇᴅ ʙʏ'
-global.author = '              「 ZYKOBOTZ MD  あ」'
+global.author = '                  ༺Ex-Alt༻  '
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
-global.danied = pickRandom(["✘ 𝗘𝗿𝗼𝗿 𝟰𝟬𝟰",
-"𝘼𝙠𝙨𝙚𝙨 𝘿𝙞𝙩𝙤𝙡𝙖𝙠",
-"⚠️ 𝘼𝙘𝙘𝙨𝙚𝙨 𝘿𝙖𝙣𝙞𝙚𝙙 ⚠️"
-])
+global.danied = pickRandom(["✘ 𝙴𝚛𝚛𝚘𝚛 404","🅰︎🅺︎🆂︎🅴︎🆂︎ 🅳︎🅸︎🆃︎🅾︎🅻︎🅰🅺","⚠️ 🅰︎🅲︎🅲︎🆂︎🅴︎🆂︎ 🅳︎🅰︎🅽︎🅸︎🅴︎🅳︎ ⚠️"])
 
 /*============== STICKER WM ==============*/
-global.stickpack = 'ZYKOBOTZ MD'
-global.stickauth = `By ©ZYKO MD`
+global.stickpack = 'Ex-Bot'
+global.stickauth = `By ༺Ex-Alt༻`
  
 /*============== LOGO ==============*/
 global.fotonya1 = 'https://telegra.ph/file/bd078351110aaaaf3aa59.jpg' 
