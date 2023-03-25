@@ -53,7 +53,7 @@ global.sfb = 'https://www.facebook.com/cybor.love'
 global.syt = 'https://www.youtube.com'
 global.tik = 'https://www.tiktok.com/miskawatydihuma' 
 global.tautanwa = 'https://wa.me/6289637252247'
-global.wame = 'https://wa.me/6289637252247' // kalau gk punya bisa ganti pake gini wa.me/6283133329293
+global.wame = 'https://wa.me/6289637252247' //
 
 /*============== PAYMENT ==============*/
 global.pdana = '0821 1896 9778'
@@ -99,20 +99,19 @@ global.wm3 = '              ⫷◎⑅ Ex-Alt ⑅◍⫸'
 global.botdate = `⌨ Waktu: ${week} ${date}\n🕜 𝗧𝗶𝗺𝗲: ${wktuwib}`
 global.bottime = `🕑T I M E : ${wktuwib}`
 global.titlebot = `❁ WhatsApp Bot | By Ex-Alt A.K.A  ☛ D a N e`
-global.packname = '☂︎ ᴄʀᴇᴀᴛᴇᴅ ʙʏ'
+global.packname = '༻𓊈𒆜Exalt𒆜𓊉༺'
 global.author = '                  ༺Ex-Alt༻  '
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 global.danied = pickRandom(["✘ 𝙴𝚛𝚛𝚘𝚛 404","🅰︎🅺︎🆂︎🅴︎🆂︎ 🅳︎🅸︎🆃︎🅾︎🅻︎🅰🅺","⚠️ 🅰︎🅲︎🅲︎🆂︎🅴︎🆂︎ 🅳︎🅰︎🅽︎🅸︎🅴︎🅳︎ ⚠️"])
 
 /*============== STICKER WM ==============*/
-global.stickpack = 'Ex-Bot'
-global.stickauth = `By ༺Ex-Alt༻`
- 
+global.stickpack = '◦•●◉✿✧༺🄴🅇🄰🄻🅃༻✧✿◉●•◦'
+global.stickauth = 'By ༺🄴🅇-🄰🄻🅃༻'
 /*============== LOGO ==============*/
-global.fotonya1 = 'https://telegra.ph/file/bd078351110aaaaf3aa59.jpg' 
-global.fotonya2 = 'https://telegra.ph/file/bd078351110aaaaf3aa59.jpg'
-global.logo = 'https://i.pinimg.com/564x/f7/d2/e4/f7d2e48fd59a8c01cd396bfc70b0a2d1.jpg'
+global.fotonya1 = 'https://telegra.ph/file/7096fc69be1350d8c8dd1.jpg' 
+global.fotonya2 = 'https://telegra.ph/file/75cfc2d7feb70e69d3ee2.jpg'
+global.logo = 'https://telegra.ph/file/543975d6e370c9ba3061f.jpg'
 global.thumb = ImgEstetik() //Main Thumbnail
 global.imagebot = ImgMountain()
 global.giflogo = VideoGalau()
@@ -129,8 +128,8 @@ global.fla = flaRandom()
 global.hwaifu = ImgWaifu()
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ TAMPILAN ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.LyAtas1 = '☰ ━━━ ❨'
-global.LyAtas2 = '❩ ━━┄┈ •⟅'
+global.LyAtas1 = '𖣭 ╶╌┈╼━━━ 【'
+global.LyAtas2 = '】 ━━┄┈ •𖣭'
 global.Ly = '┃'
 global.lybwh = '┗━━┈┈ ⳻⳻'
 global.sym = '◈▻'
@@ -139,7 +138,7 @@ global.dmenut = 'ଓ═┅═━–〈' //top
 global.dmenub = '┊↬' //body
 global.dmenub2 = '┊' //body for info cmd on Default menu
 global.dmenuf = '┗––––––––––✦' //footer
-global.dashmenu = pickRandom(["┅═┅═❏ *DASHBOARD* ❏═┅═┅", "☰ *D A S B O A R D* ☰"])
+global.dashmenu = pickRandom(["┅═┅═❏ *🄸🄽🄵🄾🅁🄼🄰🅂🄸* ❏═┅═┅", "☰ *🅸︎🅽︎🅵︎🅾︎🆁︎🅼︎🅰︎🆂︎🅸︎* ☰"])
 global.cmenut = '❏––––––『' //top
 global.cmenuh = '』––––––' //header
 global.cmenub = '┊✦ ' //body
@@ -161,9 +160,9 @@ global.eror = 'Mohon Maaf Server Kami Sedang Error!'
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ RESPOND GEME ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.benar = '𝙶𝚘𝚘𝚍 𝙹𝚘𝚋𝚋! ◕◡◕'
-global.salah = '𝙽𝚘𝚝 𝙱𝚊𝚍! ◕◠◕'
-global.dikit = "𝙳𝚒𝚔𝚒𝚝 𝙻𝚊𝚐𝚒,𝚂𝚎𝚖𝚊𝚗𝚐𝚊𝚝!!"
+global.benar = '🅱︎🅴︎🅽︎🅰︎🆁︎'
+global.salah = '🅢︎🅐︎🅛︎🅐︎🅗︎'
+global.dikit = "🅆🄰🄷 🄳🄸🄺🄸🅃 🄻🄰🄶🄸!!"
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ Emot ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
@@ -4214,9 +4213,9 @@ global.mdbot = [
 
 global.flaaa = fla
 global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
-global.urlnya = "https://www.instagram.com/kabulsaputra21"
+global.urlnya = "https://www.instagram.com/miskawaty"
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '0831-3332-9293'
+global.phn = '0821-1896-9778'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ JNGN DI UBAH ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.fsizedoc = '99999999999999'

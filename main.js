@@ -133,6 +133,8 @@ async function connectionUpdate(update) {
     
   }
   if (global.db.data == null) loadDatabase()
+  if (update.receivedPendingNotifications) return this.sendButton(nomorown + '@s.whatsapp.net', 'Bot Successfully Connected', nameown, null, [['MENU', `${usedPrefix}menu`]], null)
+   
 }
 
 
