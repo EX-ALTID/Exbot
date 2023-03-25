@@ -116,7 +116,7 @@ global.thumb = ImgEstetik() //Main Thumbnail
 global.imagebot = ImgMountain()
 global.giflogo = VideoGalau()
 global.sad = sadAll()
-global.zyko = menuAwal()
+// global.zyko = menuAwal()
 global.thumbs = ImgBoneka()
 global.thumbnailUrl = ImgBoneka()
 global.thumbdoc = ImgEstetik() 
@@ -3743,14 +3743,17 @@ function sadAll() {
 ])
  return All
 }
-function menuAwal() {
+
+/*function menuAwal() { // video di menu
   let Awal = pickRandom([
 "https://telegra.ph/file/7e744334e7bfd7e685c65.mp4",
 "https://telegra.ph/file/9ca7a7e28257b73d2c0ce.mp4",
 "https://telegra.ph/file/aaebb2ab4c79cc69906f7.mp4"
 ])
  return Awal
-}
+} */
+
+
 /* Img Array */
 function VideoGalau() {
   let Galau = pickRandom([

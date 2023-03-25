@@ -73,21 +73,21 @@ let imgr = flaaa2
 let res = JSON.parse(readFileSync('./json/emoji.json'))
 let em = res.emoji
 let waifu = hwaifu.getRandom()
-let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()
+let sapa = ['Hai', 'halo kak', 'Halo'].getRandom()
 let oh = fs.readFileSync('./thumbnail.jpg')
 let zyo = ` 👋, ${sapa} ${name} ${ucapan()},`
 let alok = `${ucapan()}, ${tag} 👋`
-let teso = `${cmenut} Information ${htka}`
-let info = `*I N F O R M A T I O N*`
+let teso = `${cmenut} 🅘︎🅝︎🅕︎🅞 ${htka}`
+let info = `*🄸🄽🄵🄾🅁🄼🄰🅂🄸*`
 let emot = `${pickRandom(['⎔', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '▢', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
-let nau = global.zyko
+//let nau = global.zyko
 let weem = `📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner`
 
      /*============== MENU ==============*/
 
 let awal = `
-️  ❍⃕  𝐈 𝐍 𝐅 𝐎 𝐔 𝐒 𝐄 𝐑
-
+  ✇ 🅸︎ 🅽︎ 🅵︎ 🅾︎ 🆄︎ 🆂︎ 🅴︎ 🆁︎
+  
   ⬡ 𝐍𝐚𝗺𝐚 : ${name}
   ⬡ 𝐁𝐢𝐨 : ${about}
   ⬡ 𝐒𝐭𝐚𝐭𝐮𝐬 : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
@@ -315,7 +315,7 @@ conn.send3ButtonImg(m.chat, waifu, zyo, awal + '\n\n' + wm, em.getRandom() + 'Al
   })
 }   
 if (pilih == "ke2") {    
-conn.send3ButtonVid(m.chat, nau, zyo, menu1 + '\n\n' + weem, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'List Menu', '.tesm', em.getRandom() + 'Sewa', '.sewa', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+conn.send3ButtonVid(m.chat, zyo, menu1 + '\n\n' + weem, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'List Menu', '.tesm', em.getRandom() + 'Sewa', '.sewa', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: 'https://www.tiktok.com/@lisaamelia09_',
     mediaType: 2, 
     description: sgc,
@@ -411,7 +411,7 @@ if (pilih == "ke9") {
  conn.send2ButtonImg(m.chat, await genProfile(conn, m), alok, menu3 + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'List Menu', '.listmenu', fkontak)
 }
 if (pilih == "ke10") {  
- conn.sendHydrated2(m.chat, menu1, wm, nau, 'https://youtu.be/IVhDnYdFTCA', 's ᴄ ʀ ɪ ᴘ ᴛ', 'https://instagram.com/kabulsaputra21', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
+ conn.sendHydrated2(m.chat, menu1, wm, 'https://youtu.be/IVhDnYdFTCA', 's ᴄ ʀ ɪ ᴘ ᴛ', 'https://instagram.com/kabulsaputra21', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
   [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Credit', `.credit`]], m)
 }
 if (pilih == "ke11") {     
@@ -423,7 +423,7 @@ conn.sendHydrated2(m.chat, awal, titlebot, waifu, 'https://vt.tiktok.com/ZS8x2Lw
   [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
 }
 if (pilih == "ke13") {   
-conn.sendHydrated2(m.chat, teso, menu10, nau, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
+conn.sendHydrated2(m.chat, teso, menu10, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
   [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
 }
 if (pilih == "ke14") {   
@@ -551,6 +551,7 @@ async function ggenProfile(conn, m) {
     await welcome.print(font, 650, 575, PhoneNumber('+' + m.sender.split('@')[0]).getNumber('international'))
     return await welcome.composite(avatar, 50, 170).getBufferAsync('image/png')
 }
+
 global.botmd = [
   'https://telegra.ph/file/81260a8b9e8cff26d2b48.jpg', 'https://telegra.ph/file/ac4928f0824a2a0492737.jpg',
   'https://telegra.ph/file/6359b013bc7e52c3b346f.jpg', 'https://telegra.ph/file/d43c89a5d2da72875ec05.jpg',
