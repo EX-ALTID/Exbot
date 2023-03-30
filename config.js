@@ -3645,7 +3645,7 @@ global.rpg = {
 }
 /*============== APIKEY SIMPEL ==============*/
 global.zenzkey = 'b8040941f7'
-global.lolkey = '2da1fcd209f20ae428d8482f' //PUNYA ZYKO MD // PUNYA WAHID  8e66d0934cf741bfd2182c16
+global.lolkey = 'SadTeams' //PUNYA ZYKO MD // PUNYA WAHID  8e66d0934cf741bfd2182c16
 
 /*============== API ==============*/
 global.APIs = { // API Prefix
