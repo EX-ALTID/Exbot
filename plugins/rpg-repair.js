@@ -37,9 +37,9 @@ const sections = [
    {
 	title: "REPAIR A TOOLS",
 	rows: [
-	    {title: "SWORD ⚔️", rowId: ".repair sword", description: "Repair Sword"},
-	    {title: "PICKAXE ⛏️", rowId: ".repair pickaxe", description: "Repair Pickaxe"},
-	    {title: "ARMOR 🥼", rowId: ".repair armor", description: "Repair Armor"},
+	    {title: "SWORD ⚔️", rowId: `${usedPrefix}repair sword`, description: "Repair Sword"},
+	    {title: "PICKAXE ⛏️", rowId: `${usedPrefix}repair pickaxe`, description: "Repair Pickaxe"},
+	    {title: "ARMOR 🥼", rowId: `${usedPrefix}repair armor`, description: "Repair Armor"},
 	]
     },
 ]
@@ -98,7 +98,7 @@ const listMessage = {
           break
 
         default:
-          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m)
+          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `${usedPrefix}menu`], m)
       }
     }
   } catch (err) {

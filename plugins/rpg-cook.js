@@ -179,59 +179,59 @@ try {
 					title: "List Featured",
 					rows: [{
 				title: "Ayam Bakar 🍖",
-				rowId: ".cook ayambakar",
+				rowId: `${usedPrefix}cook ayambakar`,
 				description: "Cooking Ayam Bakar"
 			},{
 				title: "Ayam Goreng 🍗",
-				rowId: ".cook ayambakar",
+				rowId: `${usedPrefix}cook ayambakar`,
 				description: "Cooking Ayam Goreng"
 			},{
 				title: "Opor Ayam 🍜",
-				rowId: ".cook oporayam",
+				rowId: `${usedPrefix}cook oporayam`,
 				description: "Cooking Opor Ayam"
 			},{
 				title: "Steak 🥩",
-				rowId: ".cook steak",
+				rowId: `${usedPrefix}cook steak`,
 				description: "Cooking Steak"
 			},{
 				title: "Rendang 🥘",
-				rowId: ".cook rendang",
+				rowId: `${usedPrefix}cook rendang`,
 				description: "Cooking Rendang"
 			},{
 				title: "Gulai Ayam 🍲",
-				rowId: ".cook gulaiayam",
+				rowId: `${usedPrefix}cook gulaiayam`,
 				description: "Cooking Gulai Ayam"
 			},{
 				title: "Babi Panggang 🥠",
-				rowId: ".cook babipanggang",
+				rowId: `${usedPrefix}cook babipanggang`,
 				description: "Cooking Babi Panggang"
 			},{
 				title: "ikan bakar 🐟",
-				rowId: ".cook ikanbakar",
+				rowId: `${usedPrefix}cook ikanbakar`,
 				description: "Cooking ikan bakar"
 			},{
 				title: "lele bakar 🐟",
-				rowId: ".cook lelebakar",
+				rowId: `${usedPrefix}cook lelebakar`,
 				description: "Cooking lele bakar"
 			},{
 				title: "nila bakar 🐟",
-				rowId: ".cook nilabakar",
+				rowId: `${usedPrefix}cook nilabakar`,
 				description: "Cooking nila bakar"
 			},{
 				title: "bawal bakar 🐟",
-				rowId: ".cook bawalbakar",
+				rowId: `${usedPrefix}cook bawalbakar`,
 				description: "Cooking bawal bakar"
 			},{
 				title: "udang bakar 🦐",
-				rowId: ".cook udangbakar",
+				rowId: `${usedPrefix}cook udangbakar`,
 				description: "Cooking udang bakar"
 			},{
 				title: "paus bakar 🐳",
-				rowId: ".cook pausbakar",
+				rowId: `${usedPrefix}cook pausbakar`,
 				description: "Cooking paus bakar"
 			},{
 				title: "kepiting bakar 🦀",
-				rowId: ".cook kepitingbakar",
+				rowId: `${usedPrefix}cook kepitingbakar`,
 				description: "Cooking kepiting bakar"
 			}
 					]

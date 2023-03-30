@@ -9,7 +9,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     
     let caption = `*${htki} ᴇxᴘɪʀᴇᴅ ${htka}*
 ${msToDate(global.db.data.chats[who].expired - now)}`
-    conn.sendButton(m.chat, caption, wm, null, [['Add Expired', '/expired'], ['Delete Expired', '/delexpired']], m)
+    conn.sendButton(m.chat, caption, wm, null, [['Add Expired', `${usedPrefix}expired`], ['Delete Expired', `${usedPrefix}delexpired`]], m)
     
 }
 handler.help = ['cekexpired']

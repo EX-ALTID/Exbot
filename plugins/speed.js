@@ -13,7 +13,7 @@ let format = sizeFormatter({
   keepTrailingZeroes: false,
   render: (literal, symbol) => `${literal} ${symbol}B`,
 })
-let handler = async (m, { conn, isRowner}) => {
+let handler = async (m, { conn, usedPrefix, isRowner}) => {
 	let _muptime
     if (process.send) {
       process.send('uptime')
@@ -132,8 +132,8 @@ let fliveLoc22 = {
 }}}}, {})
 
 }*/
-conn.send3ButtonImg(m.chat, nau, ha, runtt + '\n\n' + botdate, em.getRandom() + 'Menu', '.menu', em.getRandom() + 'Owner', '.owner', em.getRandom() + 'Sewa', '.sewa', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://instagram.com/lisaamelia8680',
+conn.send3ButtonImg(m.chat, nau, ha, runtt + '\n\n' + botdate, em.getRandom() + 'Menu', usedPrefix + 'menu', em.getRandom() + 'Owner', usedPrefix + 'owner', em.getRandom() + 'Sewa', usedPrefix + 'sewa', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://instagram.com/MiskawatyDihuma',
     mediaType: 2, 
     description: sgc,
     title: 'Jᴏɪɴ Sɪɴɪ Cᴜʏ',

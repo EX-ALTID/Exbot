@@ -1,7 +1,7 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 let fdoc = {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${command}`}}}}
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} choror|helo|banh
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} choror|helo|bang
   *List Efek:*
 neon
 lifebuoy

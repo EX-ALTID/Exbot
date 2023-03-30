@@ -8,7 +8,7 @@ conn, usedPrefix
     let timers = clockString(_timers)
     let penambang = await conn.getName(m.sender)
     
-    if (user.stamina < 20) return m.reply(`Stamina anda tidak cukup\nharap isi stamina anda dengan *${usedPrefix}eat8`)
+    if (user.stamina < 20) return m.reply(`Stamina anda tidak cukup\nharap isi stamina anda dengan *${usedPrefix}eat`)
     if (user.lastnambang > 10800000) throw m.reply(`Kamu masih kelelahan\nHarap tunggu ${timers} lagi`)
     
     
@@ -113,7 +113,7 @@ user.diamond += hmsil1
 
 setTimeout(() => {
                      conn.sendButton(m.chat, hsl, wm, null, [
-		['Inventory', '/inv']
+		['Inventory', `${usedPrefix}inv`]
 	], m)
                      }, 27000) 
                

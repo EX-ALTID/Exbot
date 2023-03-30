@@ -7,7 +7,7 @@ const rewards = {
 }
 
 const cooldown = 2592000000
-let handler = async (m) => {
+let handler = async (m, { conn, usedPrefix }) => {
     let user = global.db.data.users[m.sender]
     if (new Date - user.lastmonthly < cooldown) throw `You have already claimed this monthly claim, wait for *${((user.lastmonthly + cooldown) - new Date()).toTimeString()}*`
     let text = ''
@@ -15,7 +15,7 @@ let handler = async (m) => {
         user[reward] += rewards[reward]
         text += `*+${rewards[reward]}* ${rpg.emoticon(reward)}${reward}\n`
     }
-    conn.sendButton(m.chat,'*––––––『 MONTHLY 』––––––*', text.trim(), null, [['Inventory', '.inv'], ['Menu', '.menu']],m)
+    conn.sendButton(m.chat,'*––––––『 MONTHLY 』––––––*', text.trim(), null, [['Inventory', `${usedPrefix}inv`], ['Menu', `${usedPrefix}menu`]],m)
     user.lastmonthly = new Date * 1
 }
 handler.help = ['monthly']

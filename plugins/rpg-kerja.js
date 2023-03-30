@@ -21,9 +21,9 @@ let bengkel = bengke[Math.floor(Math.random() * bengke.length)]
 let ruma = ['Membangun Rumah','Membangun Gedung','Memperbaiki Rumah','Memperbaiki Gedung','Membangun Fasilitas Umum','Memperbaiki Fasilitas Umum']
 let rumah = ruma[Math.floor(Math.random() * ruma.length)]
 
-let pppecat = ['Ruko Kebakaran','LO NGOCOK DIDEPAN UMUM','Males Malesan','Ngew istrinya yg punya ruko']
+let pppecat = ['sering telat','dagangan hilang','Males Malesan','tidak masuk']
 let alasanpecat = pppecat[Math.floor(Math.random() * pppecat.length)]
-let ddppecat = ['Bakar Pasien','Jual Organ Dalem ke Lapak ilegal','serinv telat']
+let ddppecat = ['Bakar Pasien','Jual Organ Dalem ke Lapak ilegal','sering telat']
 let alasanpasien = ddppecat[Math.floor(Math.random() * ddppecat.length)]
 //Uang
 let uangm = Math.floor(Math.random() * 10) + 4000

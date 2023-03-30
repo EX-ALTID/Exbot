@@ -20,28 +20,28 @@ const sections = [
    {
 	title: `${htjava} PRESET MENU/APK –––––––––·•`,
 	rows: [
-	{title: "▢ Preset 1", rowId: ".p1"},
-    {title: "▢ Preset 2", rowId: ".p2"},
-	{title: "▢ Preset 3", rowId: ".p3"},
-	{title: "▢ Preset 4", rowId: ".p4"},
-	{title: "▢ Preset 5", rowId: ".p5"},
-	{title: "▢ Preset 6", rowId: ".p6"},
-	{title: "▢ Preset 7", rowId: ".p7"},
-	{title: "▢ Preset 8", rowId: ".p8"},
-	{title: "▢ Preset 9", rowId: ".p9"},
-	{title: "▢ Preset 10", rowId: ".p10"},
-    {title: "▢ Apk Alight Montion", rowId: ".ammod"},
-  	{title: "▢ Apk Minecraft", rowId: ".mcpe"},
-	{title: "▢ Apk NodeVideo", rowId: ".node"},
-	{title: "▢ Apk Pixellab", rowId: ".pxlb"},
-	{title: "▢ Apk Photoshop", rowId: ".pscc"},
+	{title: "▢ Preset 1", rowId: `${usedPrefix}p1`},
+    {title: "▢ Preset 2", rowId: `${usedPrefix}p2`},
+	{title: "▢ Preset 3", rowId: `${usedPrefix}p3`},
+	{title: "▢ Preset 4", rowId: `${usedPrefix}p4`},
+	{title: "▢ Preset 5", rowId: `${usedPrefix}p5`},
+	{title: "▢ Preset 6", rowId: `${usedPrefix}p6`},
+	{title: "▢ Preset 7", rowId: `${usedPrefix}p7`},
+	{title: "▢ Preset 8", rowId: `${usedPrefix}p8`},
+	{title: "▢ Preset 9", rowId: `${usedPrefix}p9`},
+	{title: "▢ Preset 10", rowId: `${usedPrefix}p10`},
+    {title: "▢ Apk Alight Montion", rowId: `${usedPrefix}ammod`},
+  	{title: "▢ Apk Minecraft", rowId: `${usedPrefix}mcpe`},
+	{title: "▢ Apk NodeVideo", rowId: `${usedPrefix}node`},
+	{title: "▢ Apk Pixellab", rowId: `${usedPrefix}pxlb`},
+	{title: "▢ Apk Photoshop", rowId: `${usedPrefix}pscc`},
 ]
     },{
 	title: `${htjava} SUPPORT ME –––––––·•`,
 	rows: [
-	    {title: "💹 • Donasi", rowId: ".owner nomor"},
-	{title: "🔖 • Sewa", rowId: ".sewa"},
-	{title: "🌟 • Buy Premium", rowId: ".premium"},
+	    {title: "💹 • Donasi", rowId: `${usedPrefix}owner nomor`},
+	{title: "🔖 • Sewa", rowId: `${usedPrefix}sewa`},
+	{title: "🌟 • Buy Premium", rowId: `${usedPrefix}premium`},
 	]
   },
 ]
@@ -72,7 +72,7 @@ const listMessage = {
           break
 
         default:
-          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m)
+          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `${usedPrefix}menu`], m)
       }
     }
   } catch (err) {

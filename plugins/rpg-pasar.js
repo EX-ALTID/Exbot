@@ -56,7 +56,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 🐖 Babi:             ${Sbabi}
 🐔 Ayam:           ${Sayam}\n⛊━─┈────────┈─━⛊\n⛊━─┈────────┈─━⛊
 🧪 *Contoh penggunaan :*
-#pasar jual ayam
+${usedPrefix}pasar jual ayam
 `.trim()
     try {
         if (/pasar|toko/i.test(command)) {
@@ -309,7 +309,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
                 }
                 break
             default:
-                return conn.sendButton(m.chat, Kchat, wm, [['Kolam', '#kolam']], m)
+                return conn.sendButton(m.chat, Kchat, wm, [['Kolam', `${usedPrefix}kolam`]], m)
             }
       /*  } else if (/beli|buy/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
@@ -556,7 +556,8 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
                         } else conn.reply(m.chat, `Cumi Kamu Tidak Cukup`.trim(), m)
                         break                                        
                 default:
-                    return conn.reply(m.chat, Kchat, m)
+                    // return conn.reply(m.chat, Kchat, m)
+                    return conn.sendButton(m.chat, Kchat, wm, [['inventory', `${usedPrefix}inv`]], m)
             }
         }
     } catch (e) {

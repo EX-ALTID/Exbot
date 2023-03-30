@@ -1,6 +1,6 @@
 let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
     if (args.length < 3) {
-        return conn.reply(m.chat, `Gunakan format .mentransfer <type> <jumlah> <@tag>\n📍contoh penggunaan: *.mentransfer money 100 @tag*\n\n*List yang bisa di transfer :*\n💹Money\n💳 Tabungan\n🥤Potion\n🗑️Sampah\n💎Diamond\n📦Common\n🛍️Uncommon\n🎁Mythic\n🧰Legendary\n🕸️string\n🪵kayu\n🪨batu\n⛓iron`.trim(), m)
+        return conn.reply(m.chat, `Gunakan format ${usedPrefix}mentransfer <type> <jumlah> <@tag>\n📍contoh penggunaan: *${usedPrefix}mentransfer money 100 @tag*\n\n*List yang bisa di transfer :*\n💹Money\n💳 Tabungan\n🥤Potion\n🗑️Sampah\n💎Diamond\n📦Common\n🛍️Uncommon\n🎁Mythic\n🧰Legendary\n🕸️string\n🪵kayu\n🪨batu\n⛓iron`.trim(), m)
     } else try {
         let type = (args[0] || '').toLowerCase()
         let count = args[1] && args[1].length > 0 ? Math.min(9999999, Math.max(parseInt(args[1]), 1)) : Math.min(1)

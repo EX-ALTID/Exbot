@@ -113,7 +113,7 @@ user.diamond += hmsil1
 		user.stamina -= 20
 	
 setTimeout(() => {
-    conn.sendButton(m.chat, hsl, wm, null, [['Inventory', '/inv']], m, { mentions: conn.parseMention(hsl) })
+    conn.sendButton(m.chat, hsl, wm, null, [['Inventory', `${usedPrefix}inv`]], m, { mentions: conn.parseMention(hsl) })
                      }, 27000) 
                
                      setTimeout(() => {

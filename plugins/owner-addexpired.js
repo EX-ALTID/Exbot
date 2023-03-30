@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (now < global.db.data.chats[who].expired) global.db.data.chats[who].expired += jumlahHari
     else global.db.data.chats[who].expired = now + jumlahHari
     let caption = `Berhasil menetapkan hari kedaluarsa untuk ${await conn.getName(who)} selama ${args[0]} hari.\n\nHitung Mundur : ${msToDate(global.db.data.chats[who].expired - now)}`
-    conn.sendButton(m.chat, caption, wm, null, [['Delete Expired', '/delexpired'], ['Cek Expired', '/cekexpired']], m)
+    conn.sendButton(m.chat, caption, wm, null, [['Delete Expired', `${usedPrefix}delexpired`], ['Cek Expired', `${usedPrefix}cekexpired`]], m)
 }
 handler.help = ['expired <hari>']
 handler.tags = ['owner']

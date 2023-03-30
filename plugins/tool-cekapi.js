@@ -59,7 +59,7 @@ conn.reply(m.chat, `• *ᴛʏᴘᴇ:* XTEAM
           break
 
         default:
-          return conn.sendButton( m.chat, wm, wm, null, [`⋮☰ Menu`, `.menu`], m)
+          return conn.sendButton( m.chat, wm, wm, null, [`⋮☰ Menu`, `${usedPrefix}menu`], m)
       }
     }
   } catch (err) {

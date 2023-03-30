@@ -1,5 +1,5 @@
 let handler = async (m, {
-	conn
+	conn, usedPrefix
 }) => {
 	let __timers = (new Date - global.db.data.users[m.sender].lastberbru)
 	let _timers = (500000 - __timers)
@@ -102,7 +102,7 @@ let handler = async (m, {
 		}, 0)
 		user.lastberburu = new Date * 1
 	} else conn.sendButton(m.chat, `\n*Sepertinya Anda Sudah Kecapekan*\n*Silahkan Istirahat dulu sekitar* ${timers}\n*Untuk bisa melanjutkan berburu*\n`, author, null, [
-		['Kandang', '.kandang']
+		['Kandang', `${usedPrefix}kandang`]
 	], m)
 }
 handler.help = ['berburu']

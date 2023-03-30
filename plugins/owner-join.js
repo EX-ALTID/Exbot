@@ -40,9 +40,9 @@ let handler = async (m, { conn, text, usedPrefix, args, participants }) => {
        let mes = `Hello Everyone👋🏻
   *${conn.user.name}* adalah salah satu Bot WhatsApp Multi-Device yang di bangun dengan Node.js, *${conn.user.name}* Baru aja di invite oleh *${m.name}*
   Untuk menggunakan *${conn.user.name}* silahkan ketik
-  #menu
+  .menu
   @${conn.user.jid.split('@')[0]} akan keluar secara otomatis setelah *${msToDate(global.db.data.chats[res].expired - now)}*`
-    await conn.send2Button(res, mes, wm, null, [[`Owner`, `.owner`], [`Menu`, `${usedPrefix}menu`]], fkonn, {
+    await conn.send2Button(res, mes, wm, null, [[`Owner`, `${usedPrefix}owner`], [`Menu`, `${usedPrefix}menu`]], fkonn, {
           mentions: d
            })
        })

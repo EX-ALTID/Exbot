@@ -1,4 +1,4 @@
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { conn, command, usedPrefix }) => {
 let nyenye = `https://web-production-3ae2.up.railway.app/api/nsfw/zettai?apikey=APIKEY`
     conn.sendButtonImg(m.chat, nyenye, 'Nih', botdate, 'Next', `.${command}`, m) 
 }

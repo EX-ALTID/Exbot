@@ -6,8 +6,8 @@ let name = await conn.getName(who)
   let res = await fetch(`https://api.zahwazein.xyz/randomanime/animeme?apikey=85345ee3d9de`)
   let x = await res.json() 
   let cap = `🐦Caption: ${x.result.caption}`
-conn.sendHydrated2(m.chat, `DONE` + ' ' + name, cap, x.result.image, 'https://instagram.com/kabulsaputra21', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', sgc, 'ɢ ʀ ᴏ ᴜ ᴘ ᴏ ғ ғ ɪ ᴄ ɪ ᴀ ʟ', [['Donasi', `.donasi`],
-  ['Owner', `.owner`]], m)
+conn.sendHydrated2(m.chat, `DONE` + ' ' + name, cap, x.result.image, 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', sgc, 'ɢ ʀ ᴏ ᴜ ᴘ ᴏ ғ ғ ɪ ᴄ ɪ ᴀ ʟ', [['Donasi', `${usedPrefix}donasi`],
+  ['Owner', `${usedPrefix}owner`]], m)
 }
 handler.help = ['animeme']
 handler.tags = ['anime']

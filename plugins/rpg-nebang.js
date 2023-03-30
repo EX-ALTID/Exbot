@@ -79,7 +79,7 @@ user.exp += hmsil3
 	
 setTimeout(() => {
                      conn.sendButton(m.chat, hsl, wm, null, [
-		['Inventory', '/inv']
+		['Inventory', `${usedPrefix}inv`]
 	], m)
                      }, 27000) 
                

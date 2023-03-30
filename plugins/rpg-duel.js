@@ -1,5 +1,5 @@
 
-let handler = async ( m, { conn, text, args, command}) => {
+let handler = async ( m, { conn, usedPrefix, text, args, command}) => {
   conn.duel = conn.duel ? conn.duel : []
   args.length != 0 ? conn.duel.push(m.mentionedJid ? m.mentionedJid[0] : (args[0].replace(/[@ .+-]/g, '').replace(' ', '') + '@s.whatsapp.net')) : ""
   let who = conn.duel[0]
@@ -26,7 +26,7 @@ let handler = async ( m, { conn, text, args, command}) => {
      let mentionedJid = [m.sender]
 
        if (new Date - user.lastduel > 300000) {
-      conn.sendButton(m.chat, pler, wm, null, [[`Ya`, `+dya`], [`No`, `+dno`]], m, { mentions: conn.parseMention(mentionedJid) })
+      conn.sendButton(m.chat, pler, wm, null, [[`Ya`, `${usedPrefix}dya`], [`No`, `${usedPrefix}dno`]], m, { mentions: conn.parseMention(mentionedJid) })
 
       } else conn.reply( m.chat, `Kamu Sudah Berduel Tunggu hingga ${timers}`, m)
      }
@@ -54,7 +54,7 @@ let handler = async ( m, { conn, text, args, command}) => {
    }
    if (/dno/.test(command)) {
    let kenal = !who.includes(m.sender)
-   if(kenal) return conn.sendButton(m.chat, `Lu siapa?\nkok ikut kut mau duel`, `Sesion`, null, [[`NO`, `.dno`]], m)
+   if(kenal) return conn.sendButton(m.chat, `Lu siapa?\nkok ikut kut mau duel`, `Sesion`, null, [[`NO`, `${usedPrefix}dno`]], m)
     //if (!who) return m.reply('tag yg ingin di ajak duel!')
     conn.reply( m.chat, `@${who.split("@")[0]} Membatalkan Ajakan Duel`, m)
     delete conn.duel[m.sender]

@@ -2,7 +2,7 @@ import fetch from "node-fetch"
 import { generateWAMessageFromContent } from "@adiwajshing/baileys"
 
 import fs from 'fs'
-let handler = async (m, { conn, text }) => {
+let handler = async (m, { conn, usedPrefix, text }) => {
 m.reply('Sedang Mendeteksi Getaran....')
 let res = await fetch(`https://saipulanuar.ga/api/info/gempa`)
 let data = await res.json()
@@ -20,7 +20,7 @@ let deteksi = `Wᴀsᴘᴀᴅᴀ ɢᴇᴍᴘᴀ ᴛᴇʀᴅᴇᴛᴇᴋsɪ!!
 ♨️ᴅɪʀᴀsᴀᴋᴀɴ : ${json.dirasakan}
 `
 let map = json.shakem
-conn.send2ButtonDoc(m.chat, 'DANGGER!!!', deteksi, 'Donasi', '.donasi','Owner','.owner', m, { contextInfo: { 
+conn.send2ButtonDoc(m.chat, 'DANGGER!!!', deteksi, 'Donasi', usedPrefix + 'donasi','Owner', usedPrefix + 'owner', m, { contextInfo: { 
 forwardingScore: fsizedoc, 
 externalAdReply: { 
 body: null, 

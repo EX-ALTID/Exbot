@@ -108,7 +108,7 @@ user.diamond += hmsil1
 	
 setTimeout(() => {
                      conn.sendButton(m.chat, hsl, wm, null, [
-		['Inventory', '/inv']
+		['Inventory', `${usedPrefix}inv`]
 	], m)
                      }, 27000) 
                

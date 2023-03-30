@@ -4,7 +4,7 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 let split = '|'
 let handler = async (m, { conn, args: [effect], text: txt, usedPrefix, command }) => {
-  if (!effect) throw 'Ketik .textpro <nama efek>\n*Contoh:*\n.textpro space Ayang\n\n╭─❑ 「 LIST EFFECT 」 ❑──\n' + effects.map(v => v.title).join('\n│ • ')
+  if (!effect) throw `Ketik ${usedPrefix}textpro <nama efek>\n*Contoh:*\n${usedPrefix}textpro Exalt\n\n╭─❑ 「 LIST EFFECT 」 ❑──\n` + effects.map(v => v.title).join('\n│ • ')
   effect = effect.toLowerCase()
   if (!effects.find(v => (new RegExp(v.title, 'gi')).test(effect))) throw `Efek *${effect}* tidak ditemukan`
   let text = txt.replace(new RegExp(effect, 'gi'), '').trimStart()
@@ -25,7 +25,7 @@ let name = await conn.getName(who)
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "title": "© CREATED BY ZYKO MD","Zyko X Lisa": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "title": "POWERED BY EX-BOT","Exalt": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
@@ -35,7 +35,7 @@ let name = await conn.getName(who)
           showAdAttribution: true,
     mediaUrl: sgc,
     mediaType: 2,
-    description: 'Zyko X Lisa', 
+    description: 'Ex-Alt', 
     title: `${command} Sedang Di Proses`,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
@@ -66,14 +66,14 @@ let name = await conn.getName(who)
     sourceUrl: sgc
      }}
   })*/
- conn.send3ButtonImg(m.chat, result.data, `Effect *${effect}nya* Dah Jadi ${tag}`,`Subs My Channel ${global.snh}`, 'Menu', '.menu', 'Owner', '.owner', 'Credit', '.credit', global.fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
+ conn.send3ButtonImg(m.chat, result.data, `Effect *${effect}nya* Dah Jadi ${tag}`,`Subs My Channel ${global.snh}`, 'Menu', `${usedPrefix}menu`, 'Owner', `${usedPrefix}owner`, 'Credit', `${usedPrefix}credit`, global.fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: sgc,
     mediaType: 2, 
     description: sgc,
     title: "Iɴɪ Dʜ Sɪᴀᴘ Cᴜʏ 〠",
     body: wm,
     thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: `https://wa.me/6283133329293?text=Hᴀɪ+Bɢ+zyko`
+    sourceUrl: `https://wa.me/6289637252247?text=🅗︎🅨︎ 🅔︎🅧︎🅐︎🅛︎🅣︎`
      }}
   })
 }

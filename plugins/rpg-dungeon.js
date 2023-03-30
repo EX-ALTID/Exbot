@@ -11,9 +11,9 @@ let handler = async(m, { conn, usedPrefix, command, text }) => {
         const buttons = []
 
         console.log({SWORD, ARMOR, HEALT})
-        if (SWORD) buttons.push({buttonId: `.craft sword`, buttonText: {displayText: 'ᴄʀᴀғᴛ sᴡᴏʀᴅ'}, type: 1})
-        if (ARMOR) buttons.push({buttonId: `.craft armor`, buttonText: {displayText: 'ᴄʀᴀғᴛ ᴀʀᴍᴏʀ'}, type: 1})
-        if (HEALT) buttons.push({buttonId: `.heal`, buttonText: {displayText: 'ʜᴇᴀʟ'}, type: 1})
+        if (SWORD) buttons.push({buttonId: `${usedPrefix}craft sword`, buttonText: {displayText: 'ᴄʀᴀғᴛ sᴡᴏʀᴅ'}, type: 1})
+        if (ARMOR) buttons.push({buttonId: `${usedPrefix}craft armor`, buttonText: {displayText: 'ᴄʀᴀғᴛ ᴀʀᴍᴏʀ'}, type: 1})
+        if (HEALT) buttons.push({buttonId: `${usedPrefix}heal`, buttonText: {displayText: 'ʜᴇᴀʟ'}, type: 1})
         
         let lmao = item(user.sword * 1, user.armor * 1, user.health * 1, usedPrefix)
         if (buttons.length == 0) return m.reply(lmao)   
@@ -28,7 +28,7 @@ let handler = async(m, { conn, usedPrefix, command, text }) => {
     global.dungeon = global.dungeon ? global.dungeon : {}
     if (Object.values(global.dungeon).find(room => room.id.startsWith('dungeon') && [room.game.player1, room.game.player2, room.game.player3, room.game.player4].includes(m.sender))) return m.reply('Kamu masih di dalam Dungeon') // nek iseh neng njero dungeon
     let timing = (new Date - (user.lastdungeon * 1)) * 1
-    if (timing < 600000) return conn.sendButton(m.chat, `*${htki} COOLDOWN ${htka}*`, `ʏᴏᴜ ʜᴀᴠᴇ ɢᴏɴᴇ ᴛᴏ ᴛʜᴇ ᴅᴜɴɢᴇᴏɴ, please wait...\n➞ ${clockString(600000 - timing)}`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']],m) // Cooldown
+    if (timing < 600000) return conn.sendButton(m.chat, `*${htki} COOLDOWN ${htka}*`, `ʏᴏᴜ ʜᴀᴠᴇ ɢᴏɴᴇ ᴛᴏ ᴛʜᴇ ᴅᴜɴɢᴇᴏɴ, please wait...\n➞ ${clockString(600000 - timing)}`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', `${usedPrefix}inv`]],m) // Cooldown
     let room = Object.values(global.dungeon).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     if (room) {
 

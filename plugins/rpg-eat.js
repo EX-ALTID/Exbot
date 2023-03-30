@@ -231,83 +231,83 @@ let handler = async (m, {
 					title: "List Featured",
 					rows: [{
 					title: "Ayam Bakar 🍖",
-				rowId: ".eat ayambakar",
+				rowId: `${usedPrefix}eat ayambakar`,
 				description: "Memakan Ayam Bakar +20 Stamina"
 			},{
 				title: "Ayam Goreng 🍗",
-				rowId: ".eat ayambakar",
+				rowId: `${usedPrefix}eat ayambakar`,
 				description: "Memakan Ayam Goreng +20 Stamina"
 			},{
 				title: "Opor Ayam 🍜",
-				rowId: ".eat oporayam",
+				rowId: `${usedPrefix}eat oporayam`,
 				description: "Memakan Opor Ayam +20 Stamina"
 			},{
 				title: "Steak 🥩",
-				rowId: ".eat steak",
+				rowId: `${usedPrefix}eat steak`,
 				description: "Memakan Steak +20 Stamina"
 			},{
 				title: "Rendang 🥘",
-				rowId: ".eat rendang",
+				rowId: `${usedPrefix}eat rendang`,
 				description: "Memakan Rendang +20 Stamina"
 			},{
 				title: "Gulai Ayam 🍲",
-				rowId: ".eat gulaiayam",
+				rowId: `${usedPrefix}eat gulaiayam`,
 				description: "Memakan Gulai Ayam +20 Stamina"
 			},{
 				title: "Babi Panggang 🥠",
-				rowId: ".eat babipanggang",
+				rowId: `${usedPrefix}eat babipanggang`,
 				description: "Memakan Babi Panggang +20 Stamina"
 			},{
 				title: "Roti 🍞",
-				rowId: ".eat roti",
+				rowId: `${usedPrefix}eat roti`,
 				description: "Memakan Roti +20 Stamina"
 			},{
 				title: "Sushi 🍣",
-				rowId: ".eat sushi",
+				rowId: `${usedPrefix}eat sushi`,
 				description: "Memakan Sushi +20 Stamina"
 			},{
 				title: "Soda 🍺",
-				rowId: ".eat soda",
+				rowId: `${usedPrefix}eat soda`,
 				description: "Meminum Soda +20 Stamina"
 			},{
 				title: "Bandage 💉",
-				rowId: ".eat bandage",
+				rowId: `${usedPrefix}eat bandage`,
 				description: "Memakai Bandage +25 Healt"
 			},{
 				title: "Ganja ☘️",
-				rowId: ".eat ganja",
+				rowId: `${usedPrefix}eat ganja`,
 				description: "Mengonsumsi Ganja +90 Healt"
 			},{
 				title: "Vodka 🍷",
-				rowId: ".eat vodka",
+				rowId: `${usedPrefix}eat vodka`,
 				description: "Meminum Vodka +25 Stamina"
 			},{
 					title: "ikan Bakar 🍖",
-				rowId: ".eat ikanbakar",
+				rowId: `${usedPrefix}eat ikanbakar`,
 				description: "Memakan ikan Bakar +20 Stamina"
 			},{
 					title: "lele Bakar 🍖",
-				rowId: ".eat lelebakar",
+				rowId: `${usedPrefix}eat lelebakar`,
 				description: "Memakan lele Bakar +20 Stamina"
 			},{
 					title: "nila Bakar 🍖",
-				rowId: ".eat nilabakar",
+				rowId: `${usedPrefix}eat nilabakar`,
 				description: "Memakan nila Bakar +20 Stamina"
 			},{
 					title: "bawal Bakar 🍖",
-				rowId: ".eat bawalbakar",
+				rowId: `${usedPrefix}eat bawalbakar`,
 				description: "Memakan bawal Bakar +20 Stamina"
 			},{
 					title: "udang Bakar 🍖",
-				rowId: ".eat udangbakar",
+				rowId: `${usedPrefix}eat udangbakar`,
 				description: "Memakan udang Bakar +20 Stamina"
 			},{
 					title: "paus Bakar 🍖",
-				rowId: ".eat pausbakar",
+				rowId: `${usedPrefix}eat pausbakar`,
 				description: "Memakan paus Bakar +20 Stamina"
 			},{
 					title: "kepiting Bakar 🍖",
-				rowId: ".eat kepitingbakar",
+				rowId: `${usedPrefix}eat kepitingbakar`,
 				description: "Memakan kepiting Bakar +20 Stamina"
 			}
 					]

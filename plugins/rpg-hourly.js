@@ -9,7 +9,7 @@ const rewards = {
   limit: 1,
 }
 const cooldown = 3600000
-let handler = async (m,{ conn} ) => {
+let handler = async (m,{ conn, usedPrefix} ) => {
   let user = global.db.data.users[m.sender]
   if (new Date - user.lasthourly < cooldown) throw `You have already claimed this hourly claim!, wait for *${((user.lasthourly + cooldown) - new Date()).toTimeString()}*`
   let text = ''
@@ -18,7 +18,7 @@ let handler = async (m,{ conn} ) => {
     user[reward] += rewards[reward]
     text += `*+${rewards[reward]}* ${global.rpg.emoticon(reward)}${reward}\n`
   }
-  conn.sendButton(m.chat,`${htki} HOURLY ${htka}`, text.trim(), null, [['Inventory', '.inv'], ['Daily', '.daily']],m)
+  conn.sendButton(m.chat,`${htki} HOURLY ${htka}`, text.trim(), null, [['Inventory', `${usedPrefix}inv`], ['Daily', `${usedPrefix}daily`]],m)
   user.lasthourly = new Date * 1
 }
 handler.help = ['hourly']

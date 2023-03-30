@@ -1,11 +1,11 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn }) => {
-        if (db.data.chats[m.chat].nsfw == false && m.isGroup) return conn.sendButton(m.chat, '❗ ᴏᴘᴛɪᴏɴs ɴsғᴡ ᴅɪᴄʜᴀᴛ ɪɴɪ ʙᴇʟᴜᴍ ᴅɪɴʏᴀʟᴀᴋᴀɴ ᴏʟᴇʜ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ',wm.date, null, [['ᴇɴᴀʙʟᴇ', '.on nsfw']], m)
+let handler = async (m, { conn, command, usedPrefix }) => {
+        if (db.data.chats[m.chat].nsfw == false && m.isGroup) return conn.sendButton(m.chat, '❗ ᴏᴘᴛɪᴏɴs ɴsғᴡ ᴅɪᴄʜᴀᴛ ɪɴɪ ʙᴇʟᴜᴍ ᴅɪɴʏᴀʟᴀᴋᴀɴ ᴏʟᴇʜ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ',wm.date, null, [['ᴇɴᴀʙʟᴇ', `${usedPrefix}on nsfw`]], m)
 	let url = cosplay[Math.floor(Math.random() * cosplay.length)]
 	let tekk = `\`\`\`➩ Nih mek! \`\`\` `
 	
-	conn.sendButton(m.chat, tekk.trim(), wm, url, [['Next','.18csply']], m)
+	conn.sendButton(m.chat, tekk.trim(), wm, url, [['Next',`${usedPrefix}18csply`]], m)
 	
 }
 handler.tags = ['nsfw']

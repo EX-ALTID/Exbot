@@ -1,19 +1,19 @@
-import db from '../lib/database.js' 
+import db from '../lib/database.js' 
   
- // TODO: 
- // const data = { 
- //   user: [{ 
- //     name: 'autolevelup', 
- //     isEnable: true 
- //   }], 
- //   chat: [{ 
- //     name: 'welcome', 
- //     isEnable: true, 
- //     rules: [{ 
- //     }] 
- //   }] 
- // } 
- let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
+ //TODO: 
+ // const data = { 
+ //   user: [{ 
+ //     name:'autolevelup', 
+ //     isEnable: true 
+ //   }], 
+ //   chat: [{ 
+ //   name: 'welcome', 
+ //   isEnable: true, 
+ //   rules: [{ 
+ //   }] 
+ //  }] 
+ //} 
+ let handler = async (m,{ conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
  const { isBanned, welcome, detect, sWelcome, sBye, anticall, nsfw, premnsfw, autoresponder, viewonce, autoread, restrict, useDocument, stiker, autolevelup, whitelistmycontacts, self, premnsfwchat, document, autosticker, getmsg, nyimak, swonly, pconly, gconly, sPromote, sDemote, antiLinkTik, antiLinkTel, antiLinkIg, antiLinkHttp, antiLinkYt, antiLinkFb, antiVirtex, antiToxic, antiLinkGc, antiStiker, antiSpam, del } = global.db.data.chats[m.chat]
   let isEnable = /true|enable|(turn)?on|1/i.test(command)
   let chat = global.db.data.chats[m.chat]
@@ -287,11 +287,11 @@ let name = await conn.getName(who)
       }
       global.opts['nyimak'] = isEnable
       break
-     case 'autolevelup': 
-     case 'levelup': 
-       isUser = true 
-       user.autolevelup = isEnable 
-       break
+      case 'autolevelup': 
+      case 'levelup': 
+      isUser = true 
+      user.autolevelup = isEnable 
+      break
     case 'autoread':
       isAll = true
       if (!isROwner) {
@@ -328,7 +328,7 @@ let name = await conn.getName(who)
       global.opts['swonly'] = isEnable
       break
     default:    
-       if (!/[01]/.test(command)) return conn.sendButton(m.chat, `*〔 llı OPTIONS ıll 〕*`, `
+      if (!/[01]/.test(command)) return conn.sendButton(m.chat,`*〔 llı OPTIONS ıll 〕*`,`
     
     
 ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦
@@ -350,7 +350,7 @@ antilinkig ${antiLinkIg ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}
 antilinkfb ${antiLinkFb ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
 anticall ${anticall ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
 autosticker ${stiker ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
-autolevelup ${autolevelup ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} ⮕  
+autolevelup ${autolevelup ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} ⮕
 autoread ${autoread ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
 document ${useDocument ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
 detect ${detect ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
@@ -358,12 +358,12 @@ autoresponder ${autoresponder ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}
 nsfw ${nsfw ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
 getmsg ${getmsg ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
 premnsfw ${premnsfw ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
-gconly ${gconly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕ 
+gconly ${gconly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕
 nyimak ${nyimak ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} ⮕ 
-pconly ${pconly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕ 
-public ${self ? '❪𝗢𝗙𝗙❫' : '❪𝗢𝗡❫'}⮕ 
-restrict ${restrict ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕  
-swonly ${swonly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕  
+pconly ${pconly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕
+public ${self ? '❪𝗢𝗙𝗙❫' : '❪𝗢𝗡❫'}⮕
+restrict ${restrict ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕ 
+swonly ${swonly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕ 
   
 ▶︎ ━━━━━━━•──────────── 
       ⇆ㅤ◁ㅤ ❚❚ㅤ ▷ㅤ↻
@@ -375,20 +375,20 @@ swonly ${swonly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕ 
 𝍤 OFF: ${usedPrefix}off welcome ❫
 
 📮Pastikan Huruf kecil semua!
- `.trim(), `./media/on-off.jpg`, [ 
- [emojis + `SEWA BOT`, `${usedPrefix}sewa`] 
- ], m, {asLocation:true}) 
-       throw false 
-   } 
-     conn.sendButton(m.chat, ucp, `*${htki} STATUS ${htka}* 
- 📔  *Type:*   ${type}  
- 🗞️   *Status:*   Succes ✅ 
- 💻️   *Options:*   ${isEnable ? 'ON' : 'OFF'} 
- 🗳️   ${isAll ? 'Bot Only' : isUser ? '' : 'Chat Only'}\n\n${botdate}
- `, `${flaaa2 + 'Options'}`, [[emojis + 'MENU', '.menuv3'],[emojis + 'OKE', 'Ok']],m)
+ `.trim(),`./media/on-off.jpg`, [ 
+ [emojis + `SEWA BOT`, `${usedPrefix}sewa`] 
+ ], m, {asLocation:true}) 
+    throw false 
+  } 
+    conn.sendButton(m.chat, ucp, `*${htki} STATUS ${htka}* 
+ 📔  *Type:*  ${type} 
+ 🗞  *Status:*  Succes✅ 
+ 💻️  *Options:*  ${isEnable ? 'ON' : 'OFF'} 
+ 🗳️   ${isAll ? 'Bot Only' : isUser ? '' :'Chat Only'}\n\n${botdate}
+ `, `${flaaa2 + 'Options'}`, [[emojis + 'MENU', usedPrefix + 'menu']],m)
  } 
- handler.help = ['settings'] 
- handler.tags = ['Bot'] 
- handler.command = /^((en|dis)able|setting|settings|(tru|fals)e|(turn)?o(n|ff)|[01])$/i 
+ handler.help = ['settings'] 
+ handler.tags = ['Bot'] 
+ handler.command = /^((en|dis)able|setting|settings|(tru|fals)e|(turn)?o(n|ff)|[01])$/i 
   
- export default handler
+ export default handler

@@ -430,7 +430,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         
                         break
                     default:
-                        return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                        return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -578,7 +578,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         } else conn.reply(m.chat, `🍌 Pisang Anda Tidak Cukup `, m)
                         break
                     default:
-                        return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                        return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -635,7 +635,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                             } else conn.reply(m.chat, `Diamond Mu Tidak Cukup Untuk Mengupgrade Pickaxe ⛏️  Seharga ${uppickaxe} Diamond 💎`, m)
                             break
                             default:
-                            return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                            return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -684,7 +684,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         break
                             
                             default:
-                            return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                            return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -697,7 +697,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                             }
                             break
             default:
-                return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Invetory', '.inv']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Invetory', `${usedPrefix}inv`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -786,7 +786,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                     
                     break
                 default:
-                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -850,7 +850,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                     } else conn.reply(m.chat, `Diamond Anda Tidak Cukup `, m)
                     break
                 default:
-                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -875,7 +875,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         
                         break
                         default:
-                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -900,7 +900,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         
                         break
                         default:
-                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 
@@ -914,7 +914,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                     }
             }
     } catch (e) {
-        conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+        conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', `${usedPrefix}ngechit`]], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
                     mediaUrl: sig,
                     mediaType: "VIDEO",
                     description: ucapan, 

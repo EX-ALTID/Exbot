@@ -17,7 +17,7 @@ let stiker = await sticker(null, global.API(`https://telegra.ph/file/d34b2ab2cb2
           showAdAttribution: true,
     mediaUrl: sgc,
     mediaType: 2,
-    description: 'Zyko X Lisa', 
+    description: 'Ex-alt Music', 
     title: `${command} Sedang Di Proses`,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
@@ -31,13 +31,13 @@ await conn.sendFile(m.chat, audio, 'error.mp3', null, fkontak, true, {
 type: 'audioMessage', 
 ptt: false, seconds: 0,contextInfo: {
          externalAdReply: { showAdAttribution: true,
- mediaUrl: 'www.instagram.com/kabulsaputra21',
+ mediaUrl: 'www.instagram.com/Miskawatydihuma',
     mediaType: 2, 
-    description: 'www.instagram.com/kabulsaputra21',
+    description: 'www.instagram.com/Miskawatydihuma',
     title: "Now Playing...",
     body: wm,
     thumbnail: await (await fetch('https://telegra.ph/file/1b9a0b9f349c927ea390b.jpg')).buffer(),
-    sourceUrl: 'www.instagram.com/kabulsaputra21'
+    sourceUrl: 'www.instagram.com/Miskawatydihuma'
  	  /*   sourceUrl: sig,
            title: '◄⟬ ●━━━ ⧏ ⧎ ⧐ ━━━● ⟭►',  
             body: 'Now Playing...', 

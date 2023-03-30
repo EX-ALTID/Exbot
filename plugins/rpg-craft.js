@@ -55,11 +55,11 @@ const sections = [
    {
 	title: "CRAFT A TOOLS",
 	rows: [
-	    {title: "SWORD ⚔️", rowId: ".craft sword", description: "Crafting A Sword"},
-	    {title: "PICKAXE ⛏️", rowId: ".craft pickaxe", description: "Crafting A Pickaxe"},
-	    {title: "FISHINGROD 🎣", rowId: ".craft fishingrod", description: "Crafting A Fishingrod"},
-	    {title: "ARMOR 🥼", rowId: ".craft armor", description: "Crafting A Armor"},
-	    {title: "ATM 💳", rowId: ".craft atm", description: "Crafting A Atm (but that's ilegal)"},
+	    {title: "SWORD ⚔️", rowId: `${usedPrefix}craft sword`, description: "Crafting A Sword"},
+	    {title: "PICKAXE ⛏️", rowId: `${usedPrefix}craft pickaxe`, description: "Crafting A Pickaxe"},
+	    {title: "FISHINGROD 🎣", rowId: `${usedPrefix}craft fishingrod`, description: "Crafting A Fishingrod"},
+	    {title: "ARMOR 🥼", rowId: `${usedPrefix}craft armor`, description: "Crafting A Armor"},
+	    {title: "ATM 💳", rowId: `${usedPrefix}craft atm`, description: "Crafting A Atm (but that's ilegal)"},
 	]
     },
 ]
@@ -139,7 +139,7 @@ const listMessage = {
           break
 
         default:
-          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m)
+          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `${usedPrefix}menu`], m)
       }
     }
   } catch (err) {

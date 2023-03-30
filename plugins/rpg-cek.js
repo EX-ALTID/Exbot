@@ -1,4 +1,4 @@
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, usedPrefix }) => {
 let imgr = flaaa.getRandom()
   let user = global.db.data.users[m.sender]
   const caption = `
@@ -12,7 +12,7 @@ let imgr = flaaa.getRandom()
 │ 📑 *Registered:* ${user.registered ? 'Yes':'No'}
 ╰──┈┈⭑
 `.trim()
-  conn.sendButton(m.chat, caption, global.wm, imgr + 'bank', [`Inventory`, '.inv'],m)
+  conn.sendButton(m.chat, caption, global.wm, imgr + 'bank', [`Inventory`, `${usedPrefix}inv`],m)
 }
 handler.help = ['bank']
 handler.tags = ['rpg']

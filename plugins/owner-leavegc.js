@@ -38,7 +38,7 @@ let handler = async (m, { conn, usedPrefix, text, command, args, isOwner, isAdmi
 ~*${dmenub} Creation :* ${new Date(groups[i].creation* 1000).toDateString()}~
 ~*${dmenub} Size :* ${groups[i].size}~
 ${dmenuf}`
-      await conn.sendButtonImg(m.chat, ppgc ? ppgc : logo, str, author, 'B A C K', '.menu', fakes, adReply)
+      await conn.sendButtonImg(m.chat, ppgc ? ppgc : logo, str, author, 'B A C K', `${usedPrefix}menu`, fakes, adReply)
       await conn.groupLeave(groups[i].id)
         await delay(2000) // jeda 2 detik
         await m.reply('Succes Leave ' + groups[i].subject + ' !')

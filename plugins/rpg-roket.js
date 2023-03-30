@@ -1,5 +1,5 @@
 
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, usedPrefix }) => {
     let __timers = (new Date - global.db.data.users[m.sender].lastroket)
     let _timers = (300000 - __timers)
     let order = global.db.data.users[m.sender].roket
@@ -125,7 +125,7 @@ setTimeout(() => {
     ], null)
                      }, 0) 
   user.lastroket = new Date * 1
-    } else conn.sendButton(m.chat, `Sepertinya Anda Sudah Kecapekan Silahkan Istirahat Dulu sekitar\n🕔 *${timers}*`, wm, null, [['inventory', '.inv']], m )
+    } else conn.sendButton(m.chat, `Sepertinya Anda Sudah Kecapekan Silahkan Istirahat Dulu sekitar\n🕔 *${timers}*`, wm, null, [['inventory', `${usedPrefix}inv`]], m )
 }
 handler.help = ['roket']
 handler.tags = ['rpg']

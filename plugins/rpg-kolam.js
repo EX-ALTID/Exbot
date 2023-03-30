@@ -1,5 +1,5 @@
 let { MessageType } = (await import('@adiwajshing/baileys')).default
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, usedPrefix }) => {
 
 let name = global.db.data.users[m.sender].name
 let level = global.db.data.users[m.sender].level
@@ -49,7 +49,7 @@ let isi = ` *🦀Kepiting = ${kepiting}*
 *🦈Hiu = ${hiu}*
 *🐡Buntal = ${buntal}*
 *🐳Orca = ${orca}*`.trim()
-  conn.sendButton(m.chat, past, `${wm}`, [['Pasar', '#pasar']], m)
+  conn.sendButton(m.chat, past, `${wm}`, [['Pasar', `${usedPrefix}pasar`]], m)
   }
   handler.help = ['kotakikan', 'kolam', 'kolamikan']
   handler.tags = ['rpg']

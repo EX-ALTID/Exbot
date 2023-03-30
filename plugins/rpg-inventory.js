@@ -338,8 +338,8 @@ Warn: *${warn}*
 Banned: *No*
 `.trim()
     //conn.reply(m.chat, str, m)
-await conn.sendButton(m.chat, str, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `.transfer`],
-[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `.adventure`]], m, { mentions: conn.parseMention(str) })
+await conn.sendButton(m.chat, str, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `${usedPrefix}transfer`],
+[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `${usedPrefix}adventure`]], m, { mentions: conn.parseMention(str) })
 } else if (args[0] == '2') {
 // Inventory 2
 let user = global.db.data.users[m.sender]
@@ -375,8 +375,8 @@ ${cooldowns}` : ''}
 *✧ nebang: ${user.lastlumber == 0 ? '✅': '❌'}*
 *✧ ngocok: ${user.lastngocok == 0 ? '✅': '❌'}*
 `.trim()
-await conn.sendButton(m.chat, caption, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `.transfer`],
-[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `.adventure`]], m, { mentions: conn.parseMention(caption) })
+await conn.sendButton(m.chat, caption, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `${usedPrefix}transfer`],
+[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `${usedPrefix}adventure`]], m, { mentions: conn.parseMention(caption) })
 } else if (args[0] == '3') {
 // Inventory 3
 let date = global.botdate
@@ -564,7 +564,7 @@ ${readMore}
 │🐘 *Gajah:* ${gajah}
 │🐊 *Buaya:* ${buaya}
 │
-│🥢 Bisa kamu masak */masak ayamb*
+│🥢 Bisa kamu masak *${usedPrefix}masak ayamb*
 │💬 *Total Hewan:* ${ buaya + gajah + panda + babihutan + monyet + harimau + kerbau + kambing + ayam + sapi + babi + banteng } tangkapan
 ╰──────────━⃝┅⃝━━────────┄⸙
 
@@ -707,7 +707,7 @@ ${readMore}
 │🗑️ *Top Sampah:* ${userssampah.indexOf(m.sender) + 1} / ${userssampah.length}
 ╰──────────━⃝┅⃝━━────────┄⸙
 `
-    await conn.sendButton(m.chat, str, global.botdate, imgr + 'inventory', [[`${healt < 40 ? 'Heal' : 'Adventure'}`, `${healt < 40 ? '.heal' : '.adventure'}`], ['Shop', '.shop']], m, {quoted: fkontak})
+    await conn.sendButton(m.chat, str, global.botdate, imgr + 'inventory', [[`${healt < 40 ? 'Heal' : 'Adventure'}`, `${healt < 40 ? `${usedPrefix}heal` : `${usedPrefix}adventure`}`], ['Shop', `${usedPrefix}shop`]], m, {quoted: fkontak})
 } else if (args[0] == '4') {
 // Inventory 4
 let health = global.db.data.users[m.sender].health
@@ -932,8 +932,8 @@ Serigala: *${serigala == 0 ? 'Tidak Punya' : '' || serigala == 1 ? 'Level 1' : '
 9.Top Sampah *${userssampah.indexOf(m.sender) + 1}* dari *${userssampah.length}*
 \n${readMore}
 `.trim()
-    await conn.sendButton(m.chat, str, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `.transfer`],
-[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `.adventure`]], m, { mentions: conn.parseMention(str) })
+    await conn.sendButton(m.chat, str, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `${usedPrefix}transfer`],
+[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `${usedPrefix}adventure`]], m, { mentions: conn.parseMention(str) })
     } else if (args[0] == 'invkolam') {
 // Inventory kolam
     let paus = global.db.data.users[m.sender].paus 
@@ -973,8 +973,8 @@ Pancingan: *${pancingan == 0 ? 'Tidak Punya' : '' || pancingan == 1 ? 'Level 1' 
 ╰────────────────
 `.trim()
 
-await conn.sendButton(m.chat, aineh, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `.transfer`],
-[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `.adventure`]], m)
+await conn.sendButton(m.chat, aineh, wm, imgr + 'inventory', [[`ᴛʀᴀɴsғᴇʀ`, `${usedPrefix}transfer`],
+[`ᴀᴅᴠᴇɴᴛᴜʀᴇ`, `${usedPrefix}adventure`]], m)
 }
 
 }

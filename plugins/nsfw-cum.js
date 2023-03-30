@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   await m.reply(`*_ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ_*`)
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-  conn.sendButton(m.chat, `Nih *${name}*`, botdate, pickRandom(animecum), [['Next', `/animecum`]],m)
+  conn.sendButton(m.chat, `Nih *${name}*`, botdate, pickRandom(animecum), [['Next', `${command}`]],m)
 }
 handler.help = ['animecum']
 handler.tags = ['anime', 'nsfw']
@@ -20,7 +20,7 @@ const animecum = [
 
   "https://media.discordapp.net/attachments/480750844363538433/682844580265197608/yande.re_492406_sample_anus_ass_breasts_cum_fellatio_gangbang_handjob_heels_horns_maid_no_bra_nopan_.jpg",
     "https://media.discordapp.net/attachments/480750844363538433/682844300521766932/image0.jpg",
-    "https://media.discordapp.net/attachments/480750844363538433/682841909453914132/qeXIT47.jpg",
+    "https://media.discordapp.net/attachments/480750844363538433/68284190945391413/qeXIT47.jpg",
     "https://media.discordapp.net/attachments/480750844363538433/682841370532380672/image0.jpg",
     "https://media.discordapp.net/attachments/480750844363538433/682840148538294322/yande.re_560426_sample_breasts_censored_cum_fate_grand_order_francis_drake_fate_grand_order_orange_m.jpg",
     "https://media.discordapp.net/attachments/480750844363538433/682839047240155152/image0.jpg",

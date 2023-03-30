@@ -1,5 +1,5 @@
 
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, usedPrefix }) => {
     let __timers = (new Date - global.db.data.users[m.sender].lastngojek)
     let _timers = (300000 - __timers)
     let order = global.db.data.users[m.sender].ojekk
@@ -86,7 +86,7 @@ setTimeout(() => {
                      m.reply('🔍Mencari pelanggan.....')
                      }, 0) 
   user.lastngojek = new Date * 1
-    } else conn.sendButton(m.chat, `Sepertinya Anda Sudah Kecapekan Silahkan Istirahat Dulu sekitar\n🕔 *${timers}*`, wm, 'inventory', '.inv', m )
+    } else conn.sendButton(m.chat, `Sepertinya Anda Sudah Kecapekan Silahkan Istirahat Dulu sekitar\n🕔 *${timers}*`, wm, 'inventory', `${usedPrefix}inv`, m )
 }
 handler.help = ['ngewe']
 handler.tags = ['rpg']

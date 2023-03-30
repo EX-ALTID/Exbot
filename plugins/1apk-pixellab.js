@@ -1,5 +1,5 @@
 import fs from 'fs'
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, usedPrefix, args, command }) => {
 let totalf = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
@@ -11,7 +11,7 @@ let totalf = Object.values(global.plugins).filter(
     
 *${htjava} Version:* unknown 
 *${htjava} Link:* https://www.mediafire.com/download/3lwbp8kz4xdcl4s
-*${htjava} Filesize:* 34mb\n`,wm + '\n\n' + botdate, thumb, [['⎙ Download ⎙','.mediafire https://www.mediafire.com/download/3lwbp8kz4xdcl4s']], m, {
+*${htjava} Filesize:* 34mb\n`,wm + '\n\n' + botdate, thumb, [['⎙ Download ⎙',usedPrefix + 'mediafire https://www.mediafire.com/download/3lwbp8kz4xdcl4s']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,

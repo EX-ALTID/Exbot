@@ -30,7 +30,7 @@ let handler = async(m, { conn, groupMetadata, usedPrefix, text, args, command })
     // Offset  420 is  7.00
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-	let zykomd = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
+	let extl = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
     let { exp, limit, level, premiumDate, premium, role, money, lastclaim, lastweekly, registered, regTime, age, banned, pasangan } = global.db.data.users[who]  
     let platform = os.platform()
     let user = global.db.data.users[m.sender]
@@ -75,7 +75,7 @@ let em = res.emoji
 let waifu = hwaifu.getRandom()
 let sapa = ['Hai', 'halo kak', 'Halo'].getRandom()
 let oh = fs.readFileSync('./thumbnail.jpg')
-let zyo = ` 👋, ${sapa} ${name} ${ucapan()},`
+let exa = ` 👋, ${sapa} ${name} ${ucapan()},`
 let alok = `${ucapan()}, ${tag} 👋`
 let teso = `${cmenut} 🅘︎🅝︎🅕︎🅞 ${htka}`
 let info = `*🄸🄽🄵🄾🅁🄼🄰🅂🄸*`
@@ -98,8 +98,7 @@ let awal = `
   ⬡ 𝐀𝐠𝐞 : ${registered ? age : ''}
   ⬡ 𝐓𝐞𝐫𝐝𝐚𝐟𝐭𝐚𝐫 : ${registered ? 'Ya ' : 'Tidak'}
 
-  ❍⃕  𝐈 𝐍 𝐅 𝐎 𝐁 𝐎 𝐓 
-  
+  ✇ 🅸︎ 🅽︎ 🅵︎ 🅾︎ 🅱︎ 🅾︎ 🆃︎
   ⬡ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦  : ${platform}
   ⬡ M𝗼𝐝𝐞 : ${mode}
   ⬡ 𝐔𝐩𝐭𝐢𝐦𝐞 : ${mpt} 
@@ -114,7 +113,7 @@ let awal = `
   /*============== MENU1 ==============*/  
   
 let menu1 = `
-️  ❍⃕  𝐈 𝐍 𝐅 𝐎 𝐔 𝐒 𝐄 𝐑
+️ ⌼ 🅸︎ 🅽︎ 🅵︎ 🅾︎ 🆄︎ 🆂︎ 🅴︎ 🆁︎
 
   ${emot} 𝐍𝐚𝗺𝐚 : ${name}
   ${emot} 𝐁𝐢𝐨 : ${about}
@@ -127,7 +126,7 @@ let menu1 = `
   ${emot} 𝐓𝐞𝐫𝐝𝐚𝐟𝐭𝐚𝐫 : ${registered ? 'Ya ' : 'Tidak'}
 
 
-  ❍⃕  𝐈 𝐍 𝐅 𝐎 𝐁 𝐎 𝐓 
+  ⌼ 🅸︎ 🅽︎ 🅵︎ 🅾︎ 🅱︎ 🅾︎ 🆃︎
   
   ${emot} 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦  : ${platform}
   ${emot} M𝗼𝐝𝐞 : ${mode}
@@ -142,7 +141,7 @@ let menu1 = `
   
   /*============== MENU2 ==============*/ 
    
-let menu2 = `${cmenut} Information ${htka}
+let menu2 = `${cmenut} 🄸🄽🄵🄾 ${htka}
  ${cmenub} Nama: ${name}
  ${cmenub} Bio : ${about}
  ${cmenub} Money: RP ${money}
@@ -163,7 +162,7 @@ ${cmenua}`
 
       /*============== MENU3 ==============*/ 
 
-let menu3 = ` ${cmenut} Information ${htka}
+let menu3 = ` ${cmenut} 🄸🄽🄵🄾 ${htka}
 ${emot} 🏷️ Nama: ${name}
 ${emot} 🗯 Bio : ${about}
 ${emot} 💲 Money: RP ${money}
@@ -193,13 +192,13 @@ let menu5 = `${namebot} _ᴀᴅᴀʟᴀʜ ᴘʀᴏɢʀᴀᴍ ᴋᴏᴍᴘᴜᴛ�
      /*============== MENU6 ==============*/
   
 let menu6 = `
-❍⃕  「 ${name} 」
+⌺  「 ${name} 」
 
-❍⃕  *I N F O - B O T*\n\n${emot} Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.\n\n❍⃕   *N O T E* \n\n${emot} Gunakan bot di private message agar bot merespon dengan cepat, \n\n${emot} Beri jeda yah agar terhindar dari banned😇\n\n📮 *Note:* _Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner dengan cara ketik .report banh tik tok audio error_\n\n\n${tag}\n\n\n${botdate}`
+〶  *🅘︎ 🅝︎ 🅕︎ 🅞︎*\n\n${emot} Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.\n\n〶   *🅽︎🅾︎🆃︎🅴︎* \n\n${emot} Gunakan bot di private message agar bot merespon dengan cepat, \n\n${emot} Beri jeda yah agar terhindar dari banned\n\n🚨 *🅽︎🅾︎🆃︎🅴︎:* _Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner dengan cara ketik .report bang menunya error_\n\n\n${tag}\n\n\n${botdate}`
 
      /*============== MENU7 ==============*/
      
-let menu7 = `${cmenut} Information ${htka}
+let menu7 = `${cmenut} 🅸︎🅽︎🅵︎🅾︎🆁︎︎🅼︎🅰︎🆂︎🅸︎ ${htka}
  ${emot} Nama: ${name}
  ${emot} Bio : ${about}
  ${emot} Money: RP ${money}
@@ -214,21 +213,19 @@ let menu7 = `${cmenut} Information ${htka}
  ${emot} Tanggal: ${date} 
  ${cmenuf}
 
- Ketik ${usedPrefix}inv untuk melihat Inventory RPG Lu Ngab
-
 ${cmenua}` 
 
      /*============== MENU8 ==============*/
   
 let menu8 = `
-❍⃕  「 ${name} 」
+❂「 ${name} 」
 
-❍⃕  *I N F O - B O T*\n\n${emot} Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.\n\n❍⃕   *N O T E* \n\n${emot} Gunakan bot di private message agar bot merespon dengan cepat, \n\n${emot} Beri jeda yah agar terhindar dari banned😇\n\n📮 *Note:* _Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner dengan cara ketik .report banh tik tok audio error_\n\n\n${wm}\n\n\n${botdate}`
+〶  *🅘︎ 🅝︎ 🅕︎ 🅞︎*\n\n${emot} Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.\n\n〶   *🅽︎🅾︎🆃︎🅴︎* \n\n${emot} Gunakan bot di private message agar bot merespon dengan cepat, \n\n${emot} Beri jeda yah agar terhindar dari banned😇\n\n🚨 *🅽︎🅾︎🆃︎🅴︎:* _Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner dengan cara ketik .report bang menunya error_\n\n\n${tag}\n\n\n${botdate}`
 
-          /*============== MENU9 ==============*/
+   /*============== MENU9 ==============*/
 
 let menu9 = `
-️  ❍⃕  𝐈 𝐍 𝐅 𝐎 𝐔 𝐒 𝐄 𝐑
+️  ☛ 🅸︎ 🅽︎ 🅵︎ 🅾︎ 🅱︎ 🅾︎ 🆃︎
 
   ⬡ 𝐍𝐚𝗺𝐚 : ${name}
   ⬡ 𝐁𝐢𝐨 : ${about}
@@ -240,9 +237,7 @@ let menu9 = `
   ⬡ 𝐀𝐠𝐞 : ${registered ? age : ''}
   ⬡ 𝐓𝐞𝐫𝐝𝐚𝐟𝐭𝐚𝐫 : ${registered ? 'Ya ' : 'Tidak'}
 
-
-
-  ❍⃕  𝐈 𝐍 𝐅 𝐎 𝐁 𝐎 𝐓 
+ ☛  🅸︎ 🅽︎ 🅵︎ 🅾︎ 🅱︎ 🅾︎ 🆃︎
   
   ⬡ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦  : ${platform}
   ⬡ M𝗼𝐝𝐞 : ${mode}
@@ -303,20 +298,20 @@ let menu12 = `❏–––––––––––––❏
 let pusat = ["ke1", "ke2", "ke3", "ke4", "ke5", "ke6", "ke7", "ke8", "ke9","ke10", "ke11", "ke12","ke13", "ke14", "ke15", "ke16","ke17", "ke18", "ke19", "ke20","ke21", "ke22", "ke23", "ke24", "ke25"]
 let pilih = pusat.getRandom()
 if (pilih == "ke1") {
-conn.send3ButtonImg(m.chat, waifu, zyo, awal + '\n\n' + wm, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'List Menu', '.tesm', em.getRandom() + 'Sewa', '.sewa', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://www.instagram.com/kabulsaputra21',
+conn.send3ButtonImg(m.chat, waifu, exa, awal + '\n\n' + wm, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'List Menu', `${usedPrefix}tesm`, em.getRandom() + 'Sewa', `${usedPrefix}}sewa`, m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://www.instagram.com/miskawatydihuma',
     mediaType: 2, 
     description: sgc,
     title: 'Jᴏɪɴ Sɪɴɪ Cᴜʏ',
     body: bottime,
-    thumbnail: await(await fetch(zykomd)).buffer(),
+    thumbnail: await(await fetch(extl)).buffer(),
     sourceUrl: sig,
 }}
   })
 }   
 if (pilih == "ke2") {    
-conn.send3ButtonVid(m.chat, zyo, menu1 + '\n\n' + weem, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'List Menu', '.tesm', em.getRandom() + 'Sewa', '.sewa', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://www.tiktok.com/@lisaamelia09_',
+conn.send3ButtonVid(m.chat, exa, menu1 + '\n\n' + weem, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'List Menu', `${usedPrefix}tesm`, em.getRandom() + 'Sewa', `${usedPrefix}sewa`, m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://www.tiktok.com/miskawatydihuma',
     mediaType: 2, 
     description: sgc,
     title: 'Jᴏɪɴ Sɪɴɪ Cᴜʏ',
@@ -327,20 +322,20 @@ conn.send3ButtonVid(m.chat, zyo, menu1 + '\n\n' + weem, em.getRandom() + 'All Me
   })
 }   
 if (pilih == "ke3") {  
-conn.sendButtonImg(m.chat, imgr + 'Menu', zyo, menu2 + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + ' List Menu', '.tesm', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
-  mediaUrl: 'https://instagram.com/lisaamelia8680',
+conn.sendButtonImg(m.chat, imgr + 'Menu', exa, menu2 + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + ' List Menu', `${usedPrefix}tesm`, fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
+  mediaUrl: 'https://instagram.com/Miskawatydihuma',
   mediaType: 2, 
   description: sgc,
   title: "Jᴏɪɴ Sɪɴɪ Cᴜʏ",
   body: wm,
-  thumbnail: await(await fetch(zykomd)).buffer(),
+  thumbnail: await(await fetch(extl)).buffer(),
   sourceUrl: sig, 
 }}
   })
 }   
 if (pilih == "ke4") {  
-conn.send2ButtonImg(m.chat, imgr + 'Menu', zyo, menu2 + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + 'All Menu', '.? all', em.getRandom() + ',List Menu', '.tesm', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
-  mediaUrl: 'https://instagram.com/lisaamelia8680',
+conn.send2ButtonImg(m.chat, imgr + 'Menu', exa, menu2 + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'List Menu', `${usedPrefix}tesm`, fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
+  mediaUrl: 'https://instagram.com/Miskawatydihuma',
   mediaType: 2, 
   description: sgc,
   title: "Jᴏɪɴ Sɪɴɪ Cᴜʏ",
@@ -351,7 +346,7 @@ conn.send2ButtonImg(m.chat, imgr + 'Menu', zyo, menu2 + '\n\n' + botdate + '\n\n
   })
 }   
 if (pilih == "ke5") {   
-conn.send2ButtonDoc(m.chat, zyo, menu6, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'Owner', '.owner', fkontak, {
+conn.send2ButtonDoc(m.chat, exa, menu6, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'Owner', `${usedPrefix}owner`, fkontak, {
 			contextInfo: {
 				forwardingScore: fsizedoc,
 				externalAdReply: {
@@ -372,8 +367,8 @@ conn.send2ButtonDoc(m.chat, zyo, menu6, em.getRandom() + 'All Menu', '.? all', e
   })
 }   
 if (pilih == "ke6") {   
-conn.send3ButtonImg(m.chat, await genProfile(conn, m), zyo, menu5, em.getRandom() +  'All Menu', '.? all', em.getRandom() +  'List Menu', '.tesm', em.getRandom() + 'Speed', '.speed', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://www.facebook.com/ZykoBotz',
+conn.send3ButtonImg(m.chat, await genProfile(conn, m), exa, menu5, em.getRandom() +  'All Menu', `${usedPrefix}? all`, em.getRandom() +  'List Menu', `${usedPrefix}tesm`, em.getRandom() + 'Speed', `${usedPrefix}speed`, m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://www.facebook.com/cybor.love',
     mediaType: 2, 
     description: sgc,
     title: "Hᴀʟᴏ Jᴀɴɢᴀɴ Lᴜᴘᴀ Bᴇʀsʏᴜᴋᴜʀ!!",
@@ -384,8 +379,8 @@ conn.send3ButtonImg(m.chat, await genProfile(conn, m), zyo, menu5, em.getRandom(
   })
 }       
 if (pilih == "ke7") {      
-  conn.send2ButtonImg(m.chat, await genProfile(conn, m), zyo, menu8, em.getRandom() +  'All Menu', '.? all', em.getRandom() +  'List Menu', '.tesm', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://www.facebook.com/ZykoBotz',
+  conn.send2ButtonImg(m.chat, await genProfile(conn, m), exa, menu8, em.getRandom() +  'All Menu', `${usedPrefix}? all`, em.getRandom() +  'List Menu', `${usedPrefix}tesm`, fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://www.facebook.com/cybor.love',
     mediaType: 2, 
     description: sgc,
     title: `${sapa} ${name} 👋,`,
@@ -396,8 +391,8 @@ if (pilih == "ke7") {
   })
 }   
 if (pilih == "ke8") {     
-  conn.send2ButtonImg(m.chat, await ggenProfile(conn, m), zyo, menu9, em.getRandom() +  'All Menu', '.? all', em.getRandom() +  'List Menu', '.tesm', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://instagram.com/lisaamelia8680',
+  conn.send2ButtonImg(m.chat, await ggenProfile(conn, m), exa, menu9, em.getRandom() +  'All Menu', `${usedPrefix}? all`, em.getRandom() +  'List Menu', `${usedPrefix}tesm`, fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://instagram.com/Miskawatydihuma',
     mediaType: 2, 
     description: sgc,
     title: `${sapa} ${name} 👋,`,
@@ -408,67 +403,68 @@ if (pilih == "ke8") {
   })
 }
 if (pilih == "ke9") {    
- conn.send2ButtonImg(m.chat, await genProfile(conn, m), alok, menu3 + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'List Menu', '.listmenu', fkontak)
+ conn.send2ButtonImg(m.chat, await genProfile(conn, m), alok, menu3 + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'List Menu', `${usedPrefix}listmenu`, fkontak)
 }
 if (pilih == "ke10") {  
- conn.sendHydrated2(m.chat, menu1, wm, 'https://youtu.be/IVhDnYdFTCA', 's ᴄ ʀ ɪ ᴘ ᴛ', 'https://instagram.com/kabulsaputra21', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Credit', `.credit`]], m)
+ conn.sendHydrated2(m.chat, menu1, wm, 'https://youtu.be', 's ᴄ ʀ ɪ ᴘ ᴛ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Credit', `${usedPrefix}credit`]], m)
 }
 if (pilih == "ke11") {     
-conn.sendHydrated2(m.chat, menu4, wm, waifu, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m)
+conn.sendHydrated2(m.chat, menu4, wm, waifu, 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m)
 }
 if (pilih == "ke12") {  
-conn.sendHydrated2(m.chat, awal, titlebot, waifu, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
+conn.sendHydrated2(m.chat, awal, titlebot, waifu, 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m) 
 }
 if (pilih == "ke13") {   
-conn.sendHydrated2(m.chat, teso, menu10, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
+conn.sendHydrated2(m.chat, teso, menu10, 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m) 
 }
 if (pilih == "ke14") {   
-conn.sendHydrated2(m.chat, teso, menu11, oh, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
+conn.sendHydrated2(m.chat, teso, menu11, oh, 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m) 
 }
 if (pilih == "ke15") {   
-conn.sendHydrated2(m.chat, info, menu12, oh, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
+conn.sendHydrated2(m.chat, info, menu12, oh, 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m) 
 }
 if (pilih == "ke16") {   
-  conn.sendHydrated2(m.chat, awal, wm2, oh, 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
+  conn.sendHydrated2(m.chat, awal, wm2, oh, 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m) 
 }
 if (pilih == "ke17") {   
-  conn.sendHydrated2(m.chat, awal, wm2, await genProfile(conn, m), 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m) 
+  conn.sendHydrated2(m.chat, awal, wm2, await genProfile(conn, m), 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m) 
 }
 if (pilih == "ke18") {   
-conn.send2ButtonImg(m.chat, await genProfile(conn, m), alok, menu5, em.getRandom() + 'List Menu', '.listmenu', em.getRandom() + 'Owner', '.owner', fkontak)  
+conn.send2ButtonImg(m.chat, await genProfile(conn, m), alok, menu5, em.getRandom() + 'List Menu', `${usedPrefix}listmenu`, em.getRandom() + 'Owner', `${usedPrefix}owner`, fkontak)  
 }
 if (pilih == "ke19") { 
-conn.send3ButtonImg(m.chat, waifu, alok, menu7, em.getRandom() + 'List Menu', '.listmenu', em.getRandom() + 'Speed', '.speed', em.getRandom() + 'Credit', '.credit', fkontak)
+conn.send3ButtonImg(m.chat, waifu, alok, menu7, em.getRandom() + 'List Menu', `${usedPrefix}listmenu`, em.getRandom() + 'Speed', `${usedPrefix}speed`, em.getRandom() + 'Credit', `${usedPrefix}credit`, fkontak)
 }
 if (pilih == "ke20") { 
-conn.sendButtonVid(m.chat, sad, zyo, menu8, em.getRandom() + 'List Menu', '.listmenu', fkontak)
+conn.sendButtonVid(m.chat, sad, exa, menu8, em.getRandom() + 'List Menu', `${usedPrefix}listmenu`, fkontak)
 }
 if (pilih == "ke21") { 
-conn.send2ButtonVid(m.chat, sad, alok, menu9, em.getRandom() + 'All Menu', '.? all', em.getRandom() + 'List Menu', '.listmenu', fkontak)
+conn.send2ButtonVid(m.chat, sad, alok, menu9, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'List Menu', `${usedPrefix}listmenu`, fkontak)
 }
 if (pilih == "ke22") {
-conn.send2ButtonImg(m.chat, await ggenProfile(conn, m), alok, menu5, em.getRandom() + 'List Menu', '.listmenu', em.getRandom() + 'Owner', '.owner', fkontak)
+conn.send2ButtonImg(m.chat, await ggenProfile(conn, m), alok, menu5, em.getRandom() + 'List Menu', `${usedPrefix}listmenu`, em.getRandom() + 'Owner', `${usedPrefix}owner`, fkontak)
 }
 if (pilih == "ke23") {
-conn.send2ButtonImg(m.chat, await ggenProfile(conn, m), alok, menu12, em.getRandom() + 'List Menu', '.listmenu', em.getRandom() + 'Owner', '.owner', fkontak) 
+conn.send2ButtonImg(m.chat, await ggenProfile(conn, m), alok, menu12, em.getRandom() + 'List Menu', `${usedPrefix}listmenu`, em.getRandom() + 'Owner', `${usedPrefix}owner`, fkontak) 
 }
 if (pilih == "ke24") {
-conn.sendHydrated2(m.chat, awal, wm2, await ggenProfile(conn, m), 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Credit', `.credit`]], m) 
+conn.sendHydrated2(m.chat, awal, wm2, await ggenProfile(conn, m), 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Credit', `${usedPrefix}credit`]], m) 
 }
 if (pilih == "ke25") {  
-conn.sendHydrated2(m.chat, teso, menu10, await ggenProfile(conn, m), 'https://vt.tiktok.com/ZS8x2Lwbd/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/lisaamelia8680', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `.? all`],
-  [em.getRandom() + 'List Menu', `.tesm`],[em.getRandom() + 'Sewa', `.sewa`]], m)     
+conn.sendHydrated2(m.chat, teso, menu10, await ggenProfile(conn, m), 'https://vt.tiktok.com/Miskawatydihuma/', 'ᴛ ɪ ᴋ ᴛ ᴏ ᴋ', 'https://instagram.com/Miskawatydihuma', 'ɪ ɴ s ᴛ ᴀ ɢ ʀ ᴀ ᴍ', [[em.getRandom() + 'All Menu', `${usedPrefix}? all`],
+  [em.getRandom() + 'List Menu', `${usedPrefix}tesm`],[em.getRandom() + 'Sewa', `${usedPrefix}sewa`]], m)     
 }
-}  
+    }
+    
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(menu|help|co)$/i

@@ -3,7 +3,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   await m.reply(`*_ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ_*`)
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-  conn.sendButton(m.chat, `Nih *${name}*`, botdate, pickRandom(orgy), [['Next', `/orgy`]],m)
+  conn.sendButton(m.chat, `Nih *${name}*`, botdate, pickRandom(orgy), [['Next', `${usedPrefix}orgy`]],m)
 }
 handler.help = ['orgy']
 handler.tags = ['anime', 'nsfw']

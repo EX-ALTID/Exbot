@@ -15,7 +15,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) =>
 `
 cap += '\n' + '••••••••••••••••••••••••' + '\n'
   	}
-  conn.sendButton(m.chat, cap, botdate, [['MENU', '.m']], m)
+  conn.sendButton(m.chat, cap, botdate, [['MENU', `${usedPrefix}m`]], m)
 }
 handler.command = /^(nhsh)$/i
 handler.limit = true
