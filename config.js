@@ -87,7 +87,7 @@ global.owner = [
   ['-', 'ISI KALAU ADA', true]
 //Ganti jd nomormu sama Namamu
 ] 
-global.mods = ['6289637252247', 'Exalt', true] 
+global.mods = ['6289637252247', 'Exalt', false] 
 global.prems = [] 
 
 /*============== WATERMARK ==============*/

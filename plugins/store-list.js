@@ -46,10 +46,12 @@ let nn = `*List From : ${groupMetadata.subject}*
 ⏰ JAM : ${wib} WIB`
     let name = conn.getName(m.sender)
 	let msg = (Object.entries(msgs).map(([nama, isi]) => { return { nama, ...isi } })).map(v => v.nama)
+	
+
 	let row = Object.keys(msg).map(v => ({
 		title: msg[v],
 		description: '',
-		rowId: msg[v]
+		rowId: msgi[v]
 	}))
 	let button = {	
 		description: `${ucapan()} : @${m.sender.split("@")[0]}`,

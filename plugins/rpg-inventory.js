@@ -136,7 +136,7 @@ const inventory = {
       name: 'adventure',
       time: adventure.cooldown
     }
-  }
+  } 
 }
 let handler = async (m, { conn, args, command, text, usedPrefix }) => {
 let imgr = flaaa2
