@@ -298,7 +298,7 @@ let menu12 = `❏–––––––––––––❏
 let pusat = ["ke1", "ke2", "ke3", "ke4", "ke5", "ke6", "ke7", "ke8", "ke9","ke10", "ke11", "ke12","ke13", "ke14", "ke15", "ke16","ke17", "ke18", "ke19", "ke20","ke21", "ke22", "ke23", "ke24", "ke25"]
 let pilih = pusat.getRandom()
 if (pilih == "ke1") {
-conn.send3ButtonImg(m.chat, waifu, exa, awal + '\n\n' + wm, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'List Menu', `${usedPrefix}tesm`, em.getRandom() + 'Sewa', `${usedPrefix}}sewa`, m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+conn.send3ButtonImg(m.chat, waifu, exa, awal + '\n\n' + wm, em.getRandom() + 'All Menu', `${usedPrefix}? all`, em.getRandom() + 'List Menu', `${usedPrefix}tesm`, em.getRandom() + 'Sewa', `${usedPrefix}sewa`, m, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: 'https://www.instagram.com/miskawatydihuma',
     mediaType: 2, 
     description: sgc,
