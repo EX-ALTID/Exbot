@@ -1,4 +1,4 @@
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, usedPrefix, command}) => {
 	//-----PRICE
 //sewa
 let sh = '5'

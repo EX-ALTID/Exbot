@@ -12,3 +12,4 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 }
 handler.command = /^(order)$/i
 export default handler
+
