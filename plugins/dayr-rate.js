@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 let handler = async (m, { conn, command }) => {
 	let url = 'https://telegra.ph/file/f65347b433bf1cbe604c8.jpg'
 let wm = 'Hai Saya Ex-Bot, rate ini di buat febuary 2023'
@@ -11,3 +11,4 @@ handler.premium = false
 handler.limit = true
 
 export default handler
+*/
