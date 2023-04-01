@@ -1,10 +1,9 @@
-//By: ZYKO MD
 import fetch from 'node-fetch'
 import fs from 'fs'
 let handler = async(m, { conn, groupMetadata, usedPrefix, text, args, command }) => {
 let imgr = flaaa2
 if (!args[0]) throw `MASUKAN URL FB`
-let f = await fetch(`https://kyyrest.diki6969.repl.co/api/dowloader/fbdown?url=${args[0]}&apikey=e8e8bade`)
+let f = await fetch(`https://kyyrest.diki6969.repl.co/api/dowloader/fbdown?url=${args[0]}&apikey=ad63266c`)
 m.reply(md)
 let x = await f.json()
 let cap = `DOWNLOADER FACEBOOK`
