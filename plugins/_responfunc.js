@@ -11,7 +11,7 @@ import {
 import moment from 'moment-timezone'
 
 //Autorespon other
-export async function all(m) {
+export async function all(m, {usedPrefix}) {
   if (m.chat.endsWith('status@broadcast')) {
         console.log('YOW!')
     }
@@ -24,7 +24,7 @@ export async function all(m) {
     if (m.isGroup) {
       if (m.mentionedJid.includes(this.user.jid)) {
         await this.sendButton(m.chat, isBanned ? "This group is banned by the owner" : banned ? "Anda telah dibanned" : "Bot Status: Online", author, null, [[isBanned ? 'Unban' : banned ? 'Pemilik Bot' : 'Menu',
-            isBanned ? '.unban' : banned ? '.owner' : '.menu'
+            isBanned ? `${usedPrefix}unban` : banned ? `${usedPrefix}owner` : `${usedPrefix}menu`
                 ]], m)
       }
     }

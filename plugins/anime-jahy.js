@@ -1,10 +1,10 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { conn, usedPrefix, command }) => {
 	let url = 'https://api.xteam.xyz/randomimage/jahy?APIKEY=Apikeymu'
     let kataanimesad = pickRandom(global.kataanine)
     let cap = `🐦Kataanimesad: ${kataanimesad}\n ${wm}`
-	conn.sendButton(m.chat, 'Wangy wangy (≧ω≦)', cap, await(await fetch(url)).buffer(), [['Menu', '.menuv3',],['Next',`.${command}`,]],m)
+	conn.sendButton(m.chat, 'Wangy wangy (≧ω≦)', cap, await(await fetch(url)).buffer(), [['Menu', `${usedPrefix}menu`,],['Next',`${usedPrefix + command}`,]],m)
 }
 handler.command = /^(jahy)$/i
 handler.tags = ['anime', 'premium', 'nsfw']

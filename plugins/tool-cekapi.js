@@ -45,10 +45,10 @@ conn.reply(m.chat, `• *ᴛʏᴘᴇ:* XTEAM
 • *ᴀᴄᴄᴏᴜɴᴛ:* ${lol.result.account_type}
 
 • *ᴇxᴘɪʀᴇᴅ:* ${lol.result.expired}`, m)
-} else m.reply('ɪɴᴠᴀʟɪᴅ ᴀᴘɪᴋᴇʏ !')
+}   else m.reply('ɪɴᴠᴀʟɪᴅ ᴀᴘɪᴋᴇʏ !')
             break
           default:
-            return conn.sendButton(m.chat, `*${htki} CEK APIKEY ${htka}*`, 'sᴇʟᴇᴄᴛ ᴛʏᴘᴇ ᴀᴘɪᴋᴇʏ ʜᴇʀᴇ!', null, [['xᴛᴇᴀᴍ', `.cekapi ${args[0]} xteam`],['ʟᴏʟʜᴜᴍᴀɴ', `.cekapi ${args[0]} lolhuman`]],m)
+            return conn.sendButton(m.chat, `*${htki} CEK APIKEY ${htka}*`, 'sᴇʟᴇᴄᴛ ᴛʏᴘᴇ ᴀᴘɪᴋᴇʏ ʜᴇʀᴇ!', null, [['xᴛᴇᴀᴍ', `${usedPrefix}cekapi ${args[0]} xteam`],['ʟᴏʟʜᴜᴍᴀɴ', `${usedPrefix}cekapi ${args[0]} lolhuman`]],m)
         }
     } else if (/enchant|enchan/i.test(command)) {
       const count = args[2] && args[2].length > 0 ? Math.min(99999999, Math.max(parseInt(args[2]), 1)) : !args[2] || args.length < 4 ? 1 :Math.min(1, count)

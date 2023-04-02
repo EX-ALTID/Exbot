@@ -2,7 +2,7 @@ import fs from 'fs'
 let { MessageType } = (await import('@adiwajshing/baileys')).default
 let handler = m => m
 
-handler.all = async function (m, { isBlocked }) {
+handler.all = async function (m, { isBlocked, usedPrefix }) {
     if (isBlocked) return
 
 
@@ -25,7 +25,7 @@ let jadibot = jadbot[Math.floor(Math.random() * jadbot.length)]
           key: m.key,
         }})
    setTimeout(() => {
-        conn.reply(m.chat, `mau jadibot? Ketik .sewa ${jadibot}`, m)
+        conn.reply(m.chat, `mau jadibot? Ketik ${usedPrefix}sewa ${jadibot}`, m)
     }, 1000)
     }
 

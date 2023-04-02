@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { conn,usedPrefix , command }) => {
 	let url = 'https://api.ibeng.tech/api/wallpaper/gremory?apikey=tamvan'
-	conn.sendButton(m.chat, 'Waifu nya om', wm, await(await fetch(url)).buffer(), [['🔁Next🔁',`.${command}`]],m)
+	conn.sendButton(m.chat, 'Waifu nya om', wm, await(await fetch(url)).buffer(), [['🔁Next🔁',`${usedPrefix + command}`]],m)
 }
 handler.command = /^(gremory)$/i
 handler.tags = ['anime']

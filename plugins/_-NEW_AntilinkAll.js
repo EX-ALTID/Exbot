@@ -30,31 +30,31 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
             if (m.text.includes(linkThisGroup)) return !0
         }
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Group Lain!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Group Lain!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Admin Terlebih dahulu_'}`, author, ['Owner', `${usedPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!isBotAdmin) return m.reply('*Anda Atmin Anda Aman :v!*')
+        } else if (!isBotAdmin) return m.reply('*Admin mah bebas :v!*')
     }
     
     if (chat.antiLinkTik && isAntiLinkTik) {
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Tiktok!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Tiktok!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Admin Terlebih dahulu_'}`, author, ['Owner', `${usedPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*')
+        } else if (!bot.restrict) return m.reply('*Anda Admin. Anda bebas disini :v!*')
     }
     
     if (chat.antiLinkYt && isAntiLinkYt) {
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Youtube!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Youtube!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Admin Terlebih dahulu_'}`, author, ['Owner', `${usedPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*')
+        } else if (!bot.restrict) return m.reply('*Anda Admin Anda Aman *')
     }
     
     if (chat.antiLinkTel && isAntiLinkTel) {
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Telegram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Telegram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Admin Terlebih dahulu_'}`, author, ['Owner', `${usedPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -62,15 +62,15 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     }
     
     if (chat.antiLinkFb && isAntiLinkFb) {
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Facebook!!*${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Facebook!!*${isBotAdmin ? '' : '\n\n_Jadikan Bot Admin Terlebih dahulu_'}`, author, ['Owner', `${usedPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*')
+        } else if (!bot.restrict) return m.reply('*Anda Admin Anda Aman :v!*')
     }
     
     if (chat.antiLinkIg && isAntiLinkIg) {
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Instagram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Instagram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', `${usedPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -78,7 +78,7 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     }
     
     if (chat.antiLinkHttp && isAntiLinkHttp) {
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Http!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Http!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, author, ['Owner', `${usedPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')

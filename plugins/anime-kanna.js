@@ -1,10 +1,10 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { conn, usedPrefix, command }) => {
 	let url = 'https://api.lolhuman.xyz/api/random/kanna?apikey=ed78c137a46873c5b8e5fe3b'
     let kataanimesad = pickRandom(global.kataanine)
     let cap = `🐦Kataanimesad: ${kataanimesad}\n ${wm}`
-	conn.sendButton(m.chat, `${command}`, cap, await(await fetch(url)).buffer(), [['Menu', '.menuv3',],['Next',`.${command}`,]],m)
+	conn.sendButton(m.chat, `${command}`, cap, await(await fetch(url)).buffer(), [['Menu', `${usedPrefix}menu`,],['Next',`${usedPrefix + command}`,]],m)
 }
 handler.command = /^(kanna)$/i
 handler.tags = ['anime']

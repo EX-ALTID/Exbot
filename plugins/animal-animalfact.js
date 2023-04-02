@@ -7,15 +7,15 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 const sections = [ {
 	title: `Silahkan Pilih Animal Favorit-mu!`,
 	rows: [
-	{title: `Dog`, rowId: `#animal dog `},//, description: ``},
-        {title: `Cat`, rowId: `#animal cat `},//, description: ``},
-	{title: `Panda`, rowId: `#animal panda`},//, description: ``},
-        {title: `Red Panda`, rowId: `#animal red_panda `},//, description: ``},
-        {title: `Fox`, rowId: `#animal fox`},//, description: ``},
-	{title: `Koala`, rowId: `#animal koala`},//, description: ``},
-        {title: `Bird`, rowId: `#animal bird `},//, description: ``},
-        {title: `Raccoon`, rowId: `#animal raccoon`},//, description: ``},
-	{title: `Kangaroo`, rowId: `#animal kangaroo`},//, description: ``},
+	{title: `Dog`, rowId: `${usedPrefix}animal dog `},//, description: ``},
+        {title: `Cat`, rowId: `${usedPrefix}animal cat `},//, description: ``},
+	{title: `Panda`, rowId: `${usedPrefix}animal panda`},//, description: ``},
+        {title: `Red Panda`, rowId: `${usedPrefix}animal red_panda `},//, description: ``},
+        {title: `Fox`, rowId: `${usedPrefix}animal fox`},//, description: ``},
+	{title: `Koala`, rowId: `${usedPrefix}animal koala`},//, description: ``},
+        {title: `Bird`, rowId: `${usedPrefix}animal bird `},//, description: ``},
+        {title: `Raccoon`, rowId: `${usedPrefix}animal raccoon`},//, description: ``},
+	{title: `Kangaroo`, rowId: `${usedPrefix}animal kangaroo`},//, description: ``},
         ]
  } ]
 

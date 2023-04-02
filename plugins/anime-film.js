@@ -2,7 +2,7 @@ import xfar from 'xfarr-api'
 import fs from 'fs'
 import fetch from 'node-fetch'
 
-let handler = async (m, { usedPrefix, command, text, args }) => {
+let handler = async (m, { usedPrefix, command, text, args, lolkey }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
@@ -10,7 +10,7 @@ let name = await conn.getName(who)
 if (command == 'filmanime') {
     if (!text) return conn.reply(m.chat, 'Harap Masukan Nama Film Animenya', m)
     try {
-	 let res = await fetch(`https://api.lolhuman.xyz/api/lk21?apikey=2da1fcd209f20ae428d8482f&query=${text}`)
+	 let res = await fetch(`https://api.lolhuman.xyz/api/lk21?apikey=${lolkey}&query=${text}`)
 	 let jsons = await res.json()
 	 let x = jsons.result
 let hasil = `*${htki} ANIME-SEARCH ${htka}*\n\n📫 Film Dari : ${x.title}
@@ -27,7 +27,7 @@ let hasil = `*${htki} ANIME-SEARCH ${htka}*\n\n📫 Film Dari : ${x.title}
 Link : ${x.link}
 
 📖Sinopsis : ${x.desc}`
-    await conn.sendButton(m.chat, hasil, wm, await(await fetch(i[0].thumb)).buffer(), [[' Menu', '/menu']], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
+    await conn.sendButton(m.chat, hasil, wm, await(await fetch(i[0].thumb)).buffer(), [[' Menu', `${usedPrefix}menu`]], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
           externalAdReply :{
           showAdAttribution: true,
     mediaUrl: sig,
@@ -49,7 +49,7 @@ if (command == 'film') {
 let i = await xfar.Film(args[0])
 let txt = `*${htki} FILM-SEARCH ${htka}*\n\n*📫 Judul :* ${i[0].judul}\n*🎞️  Tipe  :* ${i[0].type}\n*📟 Kualitas :* ${i[0].quality}\n*📮Upload :* ${i[0].upload}\n*🔗 Url :* ${await shortUrl(i[0].link)}\n-----------------------------------------------\n`
 
-await conn.sendButton(m.chat, txt, wm, await(await fetch(i[0].thumb)).buffer(), [[' Menu', '/menu']], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
+await conn.sendButton(m.chat, txt, wm, await(await fetch(i[0].thumb)).buffer(), [[' Menu', `${usedPrefix}menu`]], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
           externalAdReply :{
           showAdAttribution: true,
     mediaUrl: sig,

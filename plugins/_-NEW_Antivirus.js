@@ -52,7 +52,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
             includeStarred: false
         }).catch(console.log)
     }
-        await conn.sendButton(m.chat, `*Terdeteksi ${name} Telah Mengirim Font Aneh! (Virus Text)*\n\nPesan Anda Akan Dihapus!${isBotAdmin ? '' : '\n\n_Bot bukan admin_'}`, author, ['Owner', '/owner'], m)
+        await conn.sendButton(m.chat, `*Terdeteksi ${name} Telah Mengirim Font Aneh! (Virus Text)*\n\nPesan Anda Akan Dihapus!${isBotAdmin ? '' : '\n\n_Bot bukan admin_'}`, author, ['Owner', `${usesPrefix}owner`], m)
         if (isBotAdmin && bot.restrict) {
        return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
         await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')

@@ -1,4 +1,4 @@
-let handler  = async (m, { conn }) => {
+/*let handler  = async (m, { conn }) => {
 	
 	await m.reply(`${htki} [❗] 𝙇𝙤𝙖𝙙𝙞𝙣𝙜... ${htka}`)
   conn.reply(m.chat,`${pickRandom(global.bokep)}`, m)
@@ -52,4 +52,4 @@ global.bokep = [
 'Nama : Tifanny\nFoto : 117\nVideo : 4\nSize : 30 MB\nDurasi : - Menit\nKualitas : HD\nRate : ⭐⭐⭐⭐\n\nDownload Link\nDownload : https://drive.google.com/file/d/1lrO9YJ1-MJtHavMpN2kG3nmJSReJtzE6/view\nPassword file : AA18+#46',
 'Nama : Vierannii\nFoto : 95\nVideo : -\nSize : 12 MB\nDurasi : - Menit\nKualitas : HD\nRate : ⭐⭐⭐⭐\n\nDownload Link\nDownload : https://drive.google.com/file/d/1lrOIZFT1n5XWqkX5uVq7xmmSpKjX70Mf/view\nPassword file : AA18+#47',
 ]
-//KALAU MAU TAMBAHIN JUGA BISA
+*/

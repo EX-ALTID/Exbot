@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-  conn.sendButton(m.chat, `Nih *${name}*`, botdate, pickRandom(cosplay), [['Next', `/cosplay`]],m)
+  conn.sendButton(m.chat, `Nih *${name}*`, botdate, pickRandom(cosplay), [['Next', `${usedPrefix}cosplay`]],m)
 }
 handler.help = ['cosplay']
 handler.tags = ['anime']
