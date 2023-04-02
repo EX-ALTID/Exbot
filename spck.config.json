@@ -1,0 +1,12 @@
+{
+  "run": {
+    "type": "module",
+    "task": "npm/build",
+    "tasks": {
+      "if": [["!exists", "node_modules"]],
+      "then": "npm/install-dep"
+    },
+    "file": "",
+    "ignoreCurrent": true
+  }
+}
