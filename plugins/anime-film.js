@@ -44,12 +44,12 @@ Link : ${x.link}
   }
     }
 if (command == 'film') {
-    if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} spiderman`
+    if (!args[0]) throw `Gunakan format: ${usedPrefix + command} spiderman`
     try {
-let i = await xfar.Film(args[0])
+let i = await xfar.film(args[0])
 let txt = `*${htki} FILM-SEARCH ${htka}*\n\n*📫 Judul :* ${i[0].judul}\n*🎞️  Tipe  :* ${i[0].type}\n*📟 Kualitas :* ${i[0].quality}\n*📮Upload :* ${i[0].upload}\n*🔗 Url :* ${await shortUrl(i[0].link)}\n-----------------------------------------------\n`
 
-await conn.sendButton(m.chat, txt, wm, await(await fetch(i[0].thumb)).buffer(), [[' Menu', `${usedPrefix}menu`]], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
+await conn.sendButton(m.chat, txt, wm, await(await fetch(i[0].thumb)).buffer(), [['Menu', `${usedPrefix}menu`]], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
           externalAdReply :{
           showAdAttribution: true,
     mediaUrl: sig,
