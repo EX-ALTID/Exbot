@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, command }) => {
-	let url = 'https://api-fgmods.ddns.net/api/asupan-la?apikey=6sotNhAL'
-	conn.sendButton(m.chat, 'Nih', botdate, await(await fetch(url)).buffer(), [['Next',`.${command}`]],m)
+let handler = async (m, { conn, usedPrefix, command }) => {
+  let url = 'https://api-fgmods.ddns.net/api/asupan-la?apikey=6sotNhAL'
+  conn.sendButton(m.chat, 'Nih', botdate, await (await fetch(url)).buffer(), [['Next', `${usedPrefix + command}`]], m)
 }
 handler.command = /^(asupanlatino)$/i
 handler.tags = ['asupan']

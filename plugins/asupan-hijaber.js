@@ -9,13 +9,12 @@ handler.command = /^(hijaber)$/i
 module.exports = handler*/
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, command }) => {
-	let url = 'https://api.zacros.my.id/asupan/hijaber'
-	conn.sendButton(m.chat, 'Nih', wm, await(await fetch(url)).buffer(), [['Next',`.${command}`]],m)
+let handler = async (m, { conn, usedPrefix, command }) => {
+  let url = 'https://api.zacros.my.id/asupan/hijaber'
+  conn.sendButton(m.chat, 'Nih', wm, await (await fetch(url)).buffer(), [['Next', `${usedPrefix + command}`]], m)
 }
 handler.command = /^(hijaber)$/i
 handler.tags = ['asupan']
 handler.help = ['hijaber']
 handler.limit = true
 export default handler
-

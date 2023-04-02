@@ -1,10 +1,10 @@
 let handler = async (m, { conn, usedprefix }) => {
-    let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-    let kataanimesad = pickRandom(global.kataanine)
-    let cap = `🐦Kataanimesad: ${kataanimesad}\n ${author}`
-    conn.sendButton(m.chat, 'liuliuliuliuliu kami dengar disini ada lolicon', cap, global.API('https://some-random-api.ml', '/canvas/lolice', {
-        avatar: await conn.profilePictureUrl(who).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png'),
-    }), [['Menu', '.menu',],['lolice', `${usedprefix}lolice`]], m)
+  let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+  let kataanimesad = pickRandom(global.kataanine)
+  let cap = `🐦Kataanimesad: ${kataanimesad}\n ${author}`
+  conn.sendButton(m.chat, 'liuliuliuliuliu kami dengar disini ada lolicon', cap, global.API('https://some-random-api.ml', '/canvas/lolice', {
+    avatar: await conn.profilePictureUrl(who).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png'),
+  }), [['Menu', `${usedprefix}menu`], ['lolice', `${usedprefix}lolice`]], m)
 }
 
 handler.help = ['lolice']
@@ -44,8 +44,7 @@ global.kataanine = [
         "ᴛɪᴅᴀᴋ ꜱᴇᴍᴜᴀ ʜᴀʟ ᴅɪ ᴅᴜɴɪᴀ ɪɴɪ ʙɪꜱᴀ ᴅɪʙᴇʟɪ ᴅᴇɴɢᴀɴ ᴜᴀɴɢ -ᴋᴜʀᴏᴏ ʜᴀᴢᴀᴍᴀ (ʏᴏᴜɴɢ ʙʟᴀᴄᴋ)",
         "ᴘᴀʜʟᴀᴡᴀɴ ʙᴜᴋᴀɴ ʜᴀɴʏᴀ ᴛᴇʀᴜꜱ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ꜱɪᴀᴘᴀ ᴘᴜɴ ʏɢ ᴅɪʜᴀᴅᴀᴘᴀɴɴʏᴀ ꜱᴀᴊᴀ. ᴛᴇʀᴋᴀᴅᴀɴɢ ᴘᴀʜʟᴀᴡᴀɴ ᴊᴜɢᴀ ᴘᴇʀʟᴜ ᴍᴇɴɢᴏʀʙᴀɴᴋᴀɴ ᴅɪʀɪ ᴜɴᴛᴜᴋ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ʙᴀɴʏᴀᴋ ᴏʀᴀɴɢ (ᴛꜱᴜʙᴀꜱᴀ ᴍɪꜱᴜᴅᴀᴄʜɪ ~ ɢᴀᴛᴄʜᴀᴍᴀɴ ᴄʀᴏᴡᴅꜱ)"
 ]
+
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-
-

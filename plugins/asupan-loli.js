@@ -1,7 +1,7 @@
-let handler = async (m, { conn, text }) => {
+let handler = async (m, { conn, command, usedPrefix, text }) => {
     let yh = global.asupan
     let url = yh[Math.floor(Math.random() * yh.length)]
-    conn.sendButton(m.chat, 'Random Video Loli Lucu', 'Lolinya Kaak', url, [['NEXT', '.asupanloli']], m)
+    conn.sendButton(m.chat, 'Random Video Loli Lucu', 'Lolinya Kaak', url, [['NEXT', `${usedPrefix + command}`]], m)
   }
   handler.command = /^(asupanloli)$/i
   handler.tags = ['premium']

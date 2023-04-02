@@ -1,13 +1,13 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, usedPrefix }) => {
-    let res = await fetch('https://api.waifu.pics/sfw/waifu')
-    if (!res.ok) throw await res.text()
-    let json = await res.json()
-    let kataanimesad = pickRandom(global.kataanine)
-    let cap = `🐦Kataanimesad: ${kataanimesad}\n ${author}`
-    if (!json.url) throw 'Error!'
-    conn.sendButton(m.chat, 'Istrinya Kartun', cap, json.url, [['Speed', '.speed',],['waifu', `.waifu`,]], m)
+let handler = async (m, { conn, command, usedPrefix }) => {
+  let res = await fetch('https://api.waifu.pics/sfw/waifu')
+  if (!res.ok) throw await res.text()
+  let json = await res.json()
+  let kataanimesad = pickRandom(global.kataanine)
+  let cap = `🐦Kataanimesad: ${kataanimesad}\n ${author}`
+  if (!json.url) throw 'Error!'
+  conn.sendButton(m.chat, 'Istrinya Kartun', cap, json.url, [['Speed', `${usedPrefix}speed`], ['waifu', `${usedPrefix + command}`]], m)
 }
 handler.help = ['waifu']
 handler.tags = ['anime']
@@ -46,8 +46,7 @@ global.kataanine = [
         "ᴛɪᴅᴀᴋ ꜱᴇᴍᴜᴀ ʜᴀʟ ᴅɪ ᴅᴜɴɪᴀ ɪɴɪ ʙɪꜱᴀ ᴅɪʙᴇʟɪ ᴅᴇɴɢᴀɴ ᴜᴀɴɢ -ᴋᴜʀᴏᴏ ʜᴀᴢᴀᴍᴀ (ʏᴏᴜɴɢ ʙʟᴀᴄᴋ)",
         "ᴘᴀʜʟᴀᴡᴀɴ ʙᴜᴋᴀɴ ʜᴀɴʏᴀ ᴛᴇʀᴜꜱ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ꜱɪᴀᴘᴀ ᴘᴜɴ ʏɢ ᴅɪʜᴀᴅᴀᴘᴀɴɴʏᴀ ꜱᴀᴊᴀ. ᴛᴇʀᴋᴀᴅᴀɴɢ ᴘᴀʜʟᴀᴡᴀɴ ᴊᴜɢᴀ ᴘᴇʀʟᴜ ᴍᴇɴɢᴏʀʙᴀɴᴋᴀɴ ᴅɪʀɪ ᴜɴᴛᴜᴋ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ʙᴀɴʏᴀᴋ ᴏʀᴀɴɢ (ᴛꜱᴜʙᴀꜱᴀ ᴍɪꜱᴜᴅᴀᴄʜɪ ~ ɢᴀᴛᴄʜᴀᴍᴀɴ ᴄʀᴏᴡᴅꜱ)"
 ]
+
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-
-

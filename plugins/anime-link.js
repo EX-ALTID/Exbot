@@ -50,4 +50,4 @@ handler.help = ['animelink']
 handler.tags = ['anime']
 handler.command = /^animelink$/i
 handler.limit = true
-export default handler 
+export default handler

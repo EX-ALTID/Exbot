@@ -2,13 +2,13 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, usedPrefix, command }) => {
-let res = await fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/random.txt')
-let txt = await res.text()
-let arr = txt.split('\n')
-let cita = arr[Math.floor(Math.random() * arr.length)]
-let kataanimesad = pickRandom(global.kataanine)
-    let cap = `🐦Kataanimesad: ${kataanimesad}\n ${wm}`
-  await conn.sendButton(m.chat, `Nihh ${command}`, cap, cita, [['Menu', '.menu',],[`Next`, `.${command}`,]], m, {mentions: [m.sender], jpegThumbnail: await(await fetch(cita)).buffer()})
+  let res = await fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/random.txt')
+  let txt = await res.text()
+  let arr = txt.split('\n')
+  let cita = arr[Math.floor(Math.random() * arr.length)]
+  let kataanimesad = pickRandom(global.kataanine)
+  let cap = `🐦Kataanimesad: ${kataanimesad}\n ${wm}`
+  await conn.sendButton(m.chat, `Nihh ${command}`, cap, cita, [['Menu', `${usedPrefix}menu`], [`Next`, `${usedPrefix + command}`]], m, { mentions: [m.sender], jpegThumbnail: await (await fetch(cita)).buffer() })
 }
 handler.tags = ['anime']
 handler.help = ['randomanime']
@@ -49,7 +49,7 @@ global.kataanine = [
         "ᴛɪᴅᴀᴋ ꜱᴇᴍᴜᴀ ʜᴀʟ ᴅɪ ᴅᴜɴɪᴀ ɪɴɪ ʙɪꜱᴀ ᴅɪʙᴇʟɪ ᴅᴇɴɢᴀɴ ᴜᴀɴɢ -ᴋᴜʀᴏᴏ ʜᴀᴢᴀᴍᴀ (ʏᴏᴜɴɢ ʙʟᴀᴄᴋ)",
         "ᴘᴀʜʟᴀᴡᴀɴ ʙᴜᴋᴀɴ ʜᴀɴʏᴀ ᴛᴇʀᴜꜱ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ꜱɪᴀᴘᴀ ᴘᴜɴ ʏɢ ᴅɪʜᴀᴅᴀᴘᴀɴɴʏᴀ ꜱᴀᴊᴀ. ᴛᴇʀᴋᴀᴅᴀɴɢ ᴘᴀʜʟᴀᴡᴀɴ ᴊᴜɢᴀ ᴘᴇʀʟᴜ ᴍᴇɴɢᴏʀʙᴀɴᴋᴀɴ ᴅɪʀɪ ᴜɴᴛᴜᴋ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ʙᴀɴʏᴀᴋ ᴏʀᴀɴɢ (ᴛꜱᴜʙᴀꜱᴀ ᴍɪꜱᴜᴅᴀᴄʜɪ ~ ɢᴀᴛᴄʜᴀᴍᴀɴ ᴄʀᴏᴡᴅꜱ)"
 ]
+
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-

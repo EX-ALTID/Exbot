@@ -1,10 +1,10 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn }) => {
-	let url = gamanaufal[Math.floor(Math.random() * gamanaufal.length)]
-	let kataanimesad = pickRandom(global.kataanine)
-    let cap = `🐦Kataanimesad: ${kataanimesad}\n ${wm}`
-	conn.sendButton(m.chat, ' *ɪɴɪ ᴄᴜᴍᴀ ꜱɪᴍᴘᴇɴᴀɴ ᴏᴡɴᴇʀ ʙᴏᴛ ᴋᴏᴋ ᴋᴀᴋ* ', cap, url, [['Menu', '.menuv1',],['Next', '.simpown',]], m)
+let handler = async (m, { conn, usedPrefix, command }) => {
+  let url = gamanaufal[Math.floor(Math.random() * gamanaufal.length)]
+  let kataanimesad = pickRandom(global.kataanine)
+  let cap = `🐦Kataanimesad: ${kataanimesad}\n ${wm}`
+  conn.sendButton(m.chat, ' *ɪɴɪ ᴄᴜᴍᴀ ꜱɪᴍᴘᴇɴᴀɴ ᴏᴡɴᴇʀ ʙᴏᴛ ᴋᴏᴋ ᴋᴀᴋ* ', cap, url, [['Menu', `${usedPrefix}menu`], ['Next', `${usedPrefix + command}`]], m)
 }
 handler.command = /^(simpown)$/i
 handler.tags = ['anime']
@@ -375,7 +375,7 @@ global.kataanine = [
         "ᴛɪᴅᴀᴋ ꜱᴇᴍᴜᴀ ʜᴀʟ ᴅɪ ᴅᴜɴɪᴀ ɪɴɪ ʙɪꜱᴀ ᴅɪʙᴇʟɪ ᴅᴇɴɢᴀɴ ᴜᴀɴɢ -ᴋᴜʀᴏᴏ ʜᴀᴢᴀᴍᴀ (ʏᴏᴜɴɢ ʙʟᴀᴄᴋ)",
         "ᴘᴀʜʟᴀᴡᴀɴ ʙᴜᴋᴀɴ ʜᴀɴʏᴀ ᴛᴇʀᴜꜱ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ꜱɪᴀᴘᴀ ᴘᴜɴ ʏɢ ᴅɪʜᴀᴅᴀᴘᴀɴɴʏᴀ ꜱᴀᴊᴀ. ᴛᴇʀᴋᴀᴅᴀɴɢ ᴘᴀʜʟᴀᴡᴀɴ ᴊᴜɢᴀ ᴘᴇʀʟᴜ ᴍᴇɴɢᴏʀʙᴀɴᴋᴀɴ ᴅɪʀɪ ᴜɴᴛᴜᴋ ᴍᴇɴʏᴇʟᴀᴍᴀᴛᴋᴀɴ ʙᴀɴʏᴀᴋ ᴏʀᴀɴɢ (ᴛꜱᴜʙᴀꜱᴀ ᴍɪꜱᴜᴅᴀᴄʜɪ ~ ɢᴀᴛᴄʜᴀᴍᴀɴ ᴄʀᴏᴡᴅꜱ)"
 ]
+
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-
