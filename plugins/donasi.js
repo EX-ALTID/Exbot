@@ -42,10 +42,8 @@ let cap = `▷ ᴅᴏɴᴀsɪ ʙɪsᴀ ᴍᴇʟᴀʟᴜɪ ◁
 ▫ ᴏᴠᴏ: ${global.povo}
 ▪ ɢᴏᴘᴀʏ: ${global.pgopay}
 
-▲ Dᴏɴᴀsɪ ᴊᴜɢᴀ ᴋᴇᴘᴀᴅᴀ ᴘᴇᴍʙᴜᴀᴛ sᴄʀɪᴘᴛ ʙᴏᴛ ɪɴɪ 085212649276
-
 *sᴇᴍᴏɢᴀ ᴀɴᴅᴀ ᴅɪ ʙᴇʀɪᴋᴀɴ ᴋᴇᴍᴜᴅᴀʜᴀɴ ʀᴇᴢᴇᴋɪ ᴅᴀɴ ᴅɪ ʟɪᴘᴀᴛ ɢᴀɴᴅᴀᴋᴀɴ ʀᴇᴢᴇᴋɪ ᴀɴᴅᴀ*`
-conn.send3ButtonDoc(m.chat, `DONASI KAK?`, cap, 'Owner', '.owner', 'Sewa', '.sewa', '\nOwner Bot Ganteng Banget', '.owner', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: 'ᴅ ᴏ ɴ ᴀ ᴛ ᴇ '}}})
+conn.send3ButtonDoc(m.chat, `DONASI KAK?`, cap, 'Owner', `${usedPrefix}owner`, 'Sewa', `${usedPrefix}sewa`, '\nOwner', `${usedPrefix}owner`, m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: 'ᴅ ᴏ ɴ ᴀ ᴛ ᴇ '}}})
     } 
     
 handler.help = ['donasi']
