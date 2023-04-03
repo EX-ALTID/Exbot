@@ -341,7 +341,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lelebakar)) user.lelebakar = 0
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
-              if (!isNumber(user.limit)) user.limit = 10
+              if (!isNumber(user.limit)) user.limit = 30
               if (!isNumber(user.limitjoinfree)) user.limitjoinfree = 1
               if (!isNumber(user.lion)) user.lion = 0
               if (!isNumber(user.lionexp)) user.lionexp = 0
@@ -1002,14 +1002,14 @@ export async function handler(chatUpdate) {
             if (typeof settings !== "object") global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = true
+                if (!('autoread' in settings)) settings.autoread = false
                 if (!('restrict' in settings)) settings.restrict = true
                 if (!('jadibot' in settings)) settings.jadibot = false
                 if (!('autorestart' in settings)) settings.autorestart = true
                 if (!('restartDB' in settings)) settings.restartDB = 0
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
-                autoread: true,
+                autoread: false,
                 jadibot: false,
                 restrict: true,
                 autorestart: true,
@@ -1413,7 +1413,7 @@ export async function groupsUpdate(groupsUpdate) {
     }
 }
 
-export async function deleteUpdate(message) {
+export async function deleteUpdate(message,{usedPrefix}) {
     try {
         const { fromMe, id, participant } = message
         if (fromMe)
