@@ -51,7 +51,6 @@ let nn = `*List From : ${groupMetadata.subject}*
 	let row = Object.keys(msg).map(v => ({
 		title: msg[v],
 		description: '',
-		rowId: msgi[v]
 	}))
 	let button = {	
 		description: `${ucapan()} : @${m.sender.split("@")[0]}`,
