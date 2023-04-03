@@ -13,7 +13,7 @@ var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.from
 "currencyCodeIso4217": "IDR",
 "amount1000": "100",
 "extendedTextMessage": {
-"text": `MY DEVELOPER ZYKO-MD`,
+"text": `MY DEVELOPER Ex-bot`,
 }
 }}), { userJid: m.chat, quoted: m })
 conn.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })

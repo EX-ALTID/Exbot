@@ -1328,7 +1328,7 @@ export async function handler(chatUpdate) {
  * Handle groups participants update
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate 
  */
-export async function participantsUpdate({ id, participants, action }) {
+export async function participantsUpdate({ id, participants, usedPrefix, action }) {
     if (opts['self'])
         return
     // if (id in conn.chats) return // First login will spam
@@ -1370,7 +1370,7 @@ let wel = API('popcat', '/welcomecard', {
  let welcom = 'https://telegra.ph/file/aab124271570c51f76aac.jpg'
 
  let godbye = 'https://telegra.ph/file/deaf59bc3e5216eaae814.jpg' 
-  conn.sendButtonImg(id, await(await fetch(action === 'add' ? wel : lea)).buffer(), 'Group Messege', text, action == 'add' ? emojis + 'Selamat Datang' : emojis + 'Good Bye', action === 'add' ? '.intro' : 'hehe🗿', 
+  conn.sendButtonImg(id, await(await fetch(action === 'add' ? wel : lea)).buffer(), 'Group Messege', text, action == 'add' ? emojis + 'Selamat Datang' : emojis + 'Good Bye', action === 'add' ? `${usedPrefix}intro` : 'hehe🗿', 
   )                                                                              /*     
   await this.sendHydrated(id, 'Group Messege', text, action === 'add' ? wel: lea, sgc, (action == 'add' ? '💌 WELCOME' : '🎀 BYE'), user.split`@`[0], 'ɴᴜᴍʙᴇʀ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛ', [
       [action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : 'hehe🗿']], null, fkontak, { mentions: [user] })    */                      
@@ -1426,10 +1426,10 @@ export async function deleteUpdate(message) {
             return
             this.sendButton(msg.key.remoteJid, `Terdeteksi *@${participant.split`@`[0]}* telah menghapus pesan.
 Untuk mematikan fitur ini, ketik
-*.off antidelete*
+*${usedPrefix}off antidelete*
 
 Untuk menghapus pesan yang dikirim BOT, reply pesan dengan perintah
-*.delete*`, author, [['Owner', '.owner']], msg, adReply)
+*${usedPrefix}delete*`, author, [['Owner', `${usedPrefix}owner`]], msg, adReply)
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
         console.error(e)
@@ -1439,7 +1439,7 @@ Untuk menghapus pesan yang dikirim BOT, reply pesan dengan perintah
 /**
 dfail
  */
-global.dfail = (type, m, conn) => {
+global.dfail = (type, m, conn, usedPrefix) => {
     let nmsr = `👋 Hai *@${m.sender.split("@")[0]}*, `
     let msg = {
         rowner: `${nmsr}\n 
@@ -1465,12 +1465,12 @@ RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur i
         restrict: `${nmsr}\n
 Fitur ini di *disable* !`
     }[type]
-    if (msg) return conn.sendButton(m.chat, danied, msg, `${flaaa2 + '𝘼𝙘𝙘𝙨𝙚𝙨 𝘿𝙖𝙣𝙞𝙚𝙙'}`, [['Menu', '.menu'],['Owner', '.owner']],m)
+    if (msg) return conn.sendButton(m.chat, danied, msg, `${flaaa2 + '𝘼𝙘𝙘𝙨𝙚𝙨 𝘿𝙖𝙣𝙞𝙚𝙙'}`, [['Menu', `${usedPrefix}menu`],['Owner', `${usedPrefix}owner`]],m)
     
      let msgg = {
     	unreg: `${nmsr}\nSilahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *Click button di bawah*\n\n*Kalian bisa ikuti langkah verify selanjutnya*\n\nLAKI-LAKI ATAU PEREMPUAN ?  \n\n${wm}`
 }[type]
-if (msgg) return conn.sendButton(m.chat, `${global.htki} VERIFY ${global.htka}`, msgg, `${flaaa2 + 'Verify'}`, [['LAKI-LAKI', '/verify'],['PEREMPUAN', '/verify']],m)
+if (msgg) return conn.sendButton(m.chat, `${global.htki} VERIFY ${global.htka}`, msgg, `${flaaa2 + 'Verify'}`, [['LAKI-LAKI', `${usedPrefix}verify`],['PEREMPUAN', `${usedPrefix}verify`]],m)
 }    
     
 let file = global.__filename(import.meta.url, true)

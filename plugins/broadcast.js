@@ -53,9 +53,9 @@ let bcbg = `${pickRandom(['https://telegra.ph/file/bca700eefeeed8f2cb054.jpg', '
 ┃⫹⫺ 𝚝𝚒𝚖𝚎 : ${time}
 ┖──┈┈┈〠⸙࿉༐
 `,
-   'Menu','.menu',
-     'Owner','.owner',
-       'Donasi','.donasi'
+   'Menu',`${usedPrefix}menu`,
+     'list menu',`${usedPrefix}menulist`,
+       'Donasi',`${usedPrefix}donasi`
        )
 
      }

@@ -7,7 +7,7 @@ let { limit, role, level, exp, premiumTime } = db.data.users[m.sender]
   let name = await conn.getName(m.sender)
   m.reply(`${htki} Menampilkan Bug Menu ${htka}`)
   let tag = `@${m.sender.replace(/@.+/, '')}`
-  let zyko = `${ucapan()}, ${tag}`
+  let exlt = `${ucapan()}, ${tag}`
   let res = JSON.parse(readFileSync('./json/emoji.json'))
   let em = res.emoji
   let imgr = flaaa2
@@ -50,13 +50,12 @@ let { limit, role, level, exp, premiumTime } = db.data.users[m.sender]
 ║❏➣ ${usedPrefix}buggcrash 62888@g.us
 ╚════ ≪ °${nameown}° ≫ ════╝
 
-By : Zyko MD
-YT cannel : ZykoBotz MD
-*Note:* Jangan Salah Gunakan Bug Botz InI
+By : Ex-alt MD
+*Note:* Jangan Salah Gunakan Bug bot InI
 
 *Note:* Gunakan lah Bug Botz ini Dengan orang yang bersalah `
-conn.send2ButtonImg(m.chat, imgr + 'Bug Menu', zyko, bug + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + ' Menu', '.menu', em.getRandom() + 'Owner', '.owner',  fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
-  mediaUrl: 'https://instagram.com/lisaamelia8680',
+conn.send2ButtonImg(m.chat, imgr + 'Bug Menu', exlt, bug + '\n\n' + botdate + '\n\n' + wm, em.getRandom() + ' Menu', `${usedPrefix}menu`, em.getRandom() + 'Owner', `${usedPrefix}owner`,  fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
+  mediaUrl: 'https://instagram.com/Miskawatydihuma',
   mediaType: 2, 
   description: sgc,
   title: "Jᴏɪɴ Sɪɴɪ Cᴜʏ",
