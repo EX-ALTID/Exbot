@@ -1,34 +1,39 @@
-
 let handler = async (m, { conn, groupMetadata, usedPrefix }) => {
-    let id = m.chat
-    conn.absen = conn.absen ? conn.absen : {}
-    if (!(id in conn.absen)) await conn.sendButton(m.chat, `_*Tidak ada absen berlangsung digrup ini!*_\n\n*${usedPrefix}mulaiabsen* - untuk memulai absen`, author, null, [
-                ['Mulaiabsen', `${usedPrefix}mulaiabsen`]
-            ], m)
-            
-    let d = new Date
-    let date = d.toLocaleDateString('id', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-    })
-    let absen = conn.absen[id][1]
-    let list = absen.map((v, i) => `${dmenub} ${i + 1}.  @${v.split`@`[0]}`).join('\n')
-            let caption = `*${htjava} TANGGAL ${htjava}*\n${date}
+  let id = m.chat
+  conn.absen = conn.absen ? conn.absen : {}
+  if (!(id in conn.absen)) {
+    await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, author, null, [
+        ['Mulaiabsen', `${usedPrefix}mulaiabsen`]
+    ], m)
+    throw false
+  }
+
+  let absen = conn.absen[id][1]
+  const wasVote = absen.includes(m.sender)
+  let d = new Date
+  let date = d.toLocaleDateString('id', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+
+  let list = absen.map((v, i) => `${dmenub} ${i + 1}.  @${v.split`@`[0]}`).join('\n')
+  let caption = `*${htjava} TANGGAL ${htjava}*\n${date}
 ${conn.absen[id][2]}
 
-*${htjava} SUDAH ABSEN ${htjava}*
+*${htjava} DAFTAR ABSEN ${htjava}*
 *Total:* ${absen.length}
 
 ${dmenut}
 ${list}
 ${dmenuf}
 `
-await conn.send2Button(m.chat, caption, author, null, [['absen', `${usedPrefix}absen`], ['cekabsen', `${usedPrefix}cekabsen`]], m, { mentions: conn.parseMention(caption) })
+  await conn.sendButton(m.chat, caption, author, null, [['absen', `${usedPrefix}absen`], ['cekabsen', `${usedPrefix}cekabsen`]], m, { mentions: conn.parseMention(caption) })
+
 
 }
-handler.help = ['cekabsen']
+handler.help = ['absen']
 handler.tags = ['absen']
-handler.command = /^cekabsen$/i
-handler.group = true
+handler.command = /^(cekabsen)$/i
+
 export default handler

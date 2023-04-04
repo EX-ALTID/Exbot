@@ -5,6 +5,7 @@ let handler = async (m, { usedPrefix, text }) => {
         await conn.sendButton(m.chat, `_*Masih ada absen di chat ini!*_\n\n*${usedPrefix}hapusabsen* - untuk menghapus absen`, author, null, [
                 ['hapusabsen', `${usedPrefix}hapusabsen`]
             ], m)
+            throw false
     }
     conn.absen[id] = [
         await conn.sendButton(m.chat, `Berhasil memulai absen!\n\n*${usedPrefix}absen* - untuk absen\n*${usedPrefix}cekabsen* - untuk mengecek absen\n*${usedPrefix}hapusabsen* - untuk menghapus data absen`, author, null, [
