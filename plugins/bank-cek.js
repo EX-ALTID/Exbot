@@ -1,4 +1,4 @@
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, usedPrefix }) => {
   let user = global.db.data.users[m.sender]
   const caption = `
 ▧「 *B A N K  U S E R* 」
