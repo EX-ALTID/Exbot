@@ -1,7 +1,7 @@
 {
     "name": "MD",
     "version": "3.0.0",
-    "description": "WhatsApp BOT By zyko",
+    "description": "WhatsApp BOT",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -23,20 +23,20 @@
         "zykobotmd",
         "zyko"
     ],
-    "homepage": "https://github.com/ZykoBotz-MD",
+    "homepage": "https://github.com/EX-ALTID",
     "author": {
-        "name": "Zyko"
+        "name": "exalt"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ZykoBotz-MD"
+        "url": "git+https://github.com/EX-ALTID/Exbot"
     },
     "bugs": {
-        "url": "https://github.com/ZykoBotz-MD"
+        "url": "https://github.com/EX-ALTID/issue"
     },
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/baileys": "github:Aldi-Ganz-Offc/baileys",
+    "@adiwajshing/baileys": "github:amiruldev20/Baileys",
         "@bochilteam/scraper": "^4.0.22-alpha.0",
         "@vitalets/google-translate-api": "^8.0.0",
         "awesome-phonenumber": "^2.68.0",
