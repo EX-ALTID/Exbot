@@ -91,11 +91,13 @@ const { state, saveState } = store.useSingleFileAuthState(global.authFile)
 
 const connectionOptions = {
   printQRInTerminal: true, // memunculkan qr di terminal
-  syncFullHistory: false, // menerima riwayat lengkap
-  markOnlineOnConnect: false, // membuat wa bot of, true jika ingin selalu menyala
-  connectTimeoutMs: 60_000, // atur jangka waktu timeout
-  defaultQueryTimeoutMs: 0, // atur jangka waktu query (0: tidak ada batas)
-  keepAliveIntervalMs: 10000, // interval ws
+  auth: state,
+  logger: pino({ level: 'silent' }),
+ // syncFullHistory: false, // menerima riwayat lengkap
+//  markOnlineOnConnect: false, // membuat wa bot of, true jika ingin selalu menyala
+//  connectTimeoutMs: 60_000, // atur jangka waktu timeout
+//  defaultQueryTimeoutMs: 0, // atur jangka waktu query (0: tidak ada batas)
+//  keepAliveIntervalMs: 10000, // interval ws
   generateHighQualityLinkPreview: true, // menambah kualitas thumbnail preview
   // patch dibawah untuk tambahan jika hydrate/list tidak bekerja
   patchMessageBeforeSending: (message) => {

@@ -5,7 +5,7 @@ import { youtubeSearch } from '@bochilteam/scraper'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!text) throw `Use example ${usedPrefix}${command} naruto blue bird`
-   let vid = (await youtubeSearch(text)).video[0] 
+  let vid = (await youtubeSearch(text)).video[0] 
    if (!vid) throw 'ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ ɴᴏᴛ ғᴏᴜɴᴅ﹗' 
    let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid 
    const url = 'https://www.youtube.com/watch?v=' + videoId 
