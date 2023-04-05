@@ -3674,9 +3674,11 @@ global.APIs = { // API Prefix
   ibeng: 'https://api.ibeng.tech',
   ZeeoneOfc: 'https://api.zeeoneofc.my.id',
   ikiy: 'https://kyyrest.diki6969.repl.co',
+  can: 'https://pnggilajacn.my.id',
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
+  'https://pnggilajacn.my.id': 'ItsukaChan',
   'https://api.zahwazein.xyz': '85345ee3d9de',
   'https://api.botcahx.biz.id': '954984e8',
   'https://kyyrest.diki6969.repl.co': 'e8e8bade',
