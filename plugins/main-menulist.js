@@ -23,14 +23,6 @@ ${emot}│☂︎ *Level:* %level [ %xp4levelup Xp For Levelup]
 ${emot}│☂︎ *Xp:* %exp / %maxexp
 ┬│☂︎ *Total Xp:* %totalexp
 │╰────────────────···
-┠─────═[ TODAY ]═─────⋆
-│╭────────────────···
-┴│    *${ucapan()} %name!*
-${emot}│☂︎ *Tanggal:* %week %weton
-${emot}│☂︎ *Date:* %date
-${emot}│☂︎ *Tanggal Islam:* %dateIslamic
-${emot}│☂︎ *WIB:* %wib
-┬│☂︎ *Waktu:* %time
 │╰────────────────···
 ┠─────═[ INFO BOT ]═─────⋆
 │╭────────────────···
@@ -45,12 +37,6 @@ ${emot}│☂︎ *Uptime:* %muptime
 ┬│☂︎ *Database:* %rtotalreg dari %totalreg
 │╰────────────────···
 ╰──────────═┅═──────────
-
-⃝▣──「 *INFO CMD* 」───⬣
-│ *%totalfeatures* Command
-│ *Ⓟ* = Premium
-│ *Ⓛ* = Limit
-▣────────────⬣
 `.trimStart(),
   header: '⃝▣──「 %category 」───⬣',
   body: `${emot} %cmd %isPremium %islimit`,
@@ -64,19 +50,19 @@ let em = res.emoji
 let names = await conn.getName(m.sender)
 	let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 	let zykomd = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
-	 let ktnya = [`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Mungkin menu ini bermanfaat?_`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Terimakasih sudah menggunakan bot ini_`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Semoga gak erorr_`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Jika lama kemungkiman erorr atau delay_`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Menampilkan menu_`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Wait..._`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Dua tiga kucing berlari_`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Bentar bang akan kutampilkan menunya_`,
-`\n\n\n ${emojis} Hai *${names}* : \n${htjava} _Prosess..._`]
+	 let ktnya = [`\n\n ${emojis} Hai *${names}* : \n${htjava} please wait...`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} Loading.....`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} Dont rush please..`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} tunggu bentar`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} lagi ngoding..... sabar`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} _Wait..._`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} ga lama kok`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} jangan sering² gunakan menu ini`,
+`\n\n ${emojis} Hai *${names}* : \n${htjava} wait pipis dulu`]
     let ktx = ktnya.getRandom()
 	let tags
 	let teks = `${args[0]}`.toLowerCase()
-let arrayMenu = ['all', 'anime', 'update', 'berita', 'edukasi', 'news', 'random', 'maker', 'menbalas', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'asupan', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'catatan', 'absen', 'store', 'virus', 'nsfw', 'audio', 'jadibot', 'random', 'info', 'audioanime', 'owner', 'nocategory']
+let arrayMenu = ['all', 'anime', 'update', 'berita', 'edukasi', 'news', 'random', 'maker', 'menbalas', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'asupan', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'catatan', 'absen', 'store', 'virus', 'nsfw', 'audio', 'jadibot', 'random', 'info', 'audioanime', 'owner', 'nocategory', 'dayr']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
   'main': 'Main', 
@@ -87,6 +73,7 @@ let arrayMenu = ['all', 'anime', 'update', 'berita', 'edukasi', 'news', 'random'
   'kerang': 'Kerang Ajaib',
   'quotes': 'Quotes',
   'random': 'Random',
+  'dayr' : 'DayR',
   'fun': 'Fun',
   'asupan': 'Asupan',
   'anime': 'Anime', 
@@ -116,6 +103,9 @@ let arrayMenu = ['all', 'anime', 'update', 'berita', 'edukasi', 'news', 'random'
 }
   if (teks == 'game') tags = {
     'game': 'Game'
+  }
+  if (teks == 'dayr') tags = {
+      'dayr': 'DayR'
   }
   if (teks == 'anime') tags = {
     'anime': 'Anime'
@@ -310,7 +300,8 @@ if (teks == 'virus') tags = {
 
 let usrs = db.data.users[m.sender]
 let jam = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-let namop = ["SPEED BOT",
+let namop = ["DayR",
+"SPEED BOT",
 "OWNER BOT",
 "RUNTIME BOT",
 "SCRIPT BOT",
@@ -357,14 +348,15 @@ let namop = ["SPEED BOT",
 "Menu V2",
 "Menu V3"]
 
-let idop = [`${usedPrefix}speed`,
+let idop = [`${usedPrefix}dayr`,
+`${usedPrefix}speed`,
 `${usedPrefix}owner`,
 `${usedPrefix}runtime`,
 `${usedPrefix}sc`,
 `${usedPrefix}sewa`,
 `${usedPrefix}premium`,
 `${usedPrefix}donasi`,
-`${usedPrefix}zykomd`,
+`${usedPrefix}exalt`,
 `${usedPrefix}? store`,
 `${usedPrefix}? menbalas`,
 `${usedPrefix}? all`,
@@ -404,14 +396,15 @@ let idop = [`${usedPrefix}speed`,
 `${usedPrefix}Menuv2`,
 `${usedPrefix}Menuv3`] 
 
-let desop = ["Menampilkan kecepatan respon BOT",
+let desop = ["Menampilkan Menu DAY-R",
+"Menampilkan kecepatan respon BOT",
 "Menampilkan List owner BOT",
 "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 Waktu Bot Berjalan",
 "Nih Source Code",
 "Menampilkan list harga sewa BOT",
 "Menampilkan list harga premium",
 "Support BOT agar lebih fast respon",
-"Jangan Lupa mampir ke Cannel ZykoBotz MD", 
+"calm down", 
 ktx,
 ktx,
 ktx,
@@ -494,14 +487,14 @@ let tek = `*${ucapan()} ${conn.getName(m.sender)}*
 ┌┤❀  Bagaimana Harimu? 😄
 ┊│❀  Terima Kasih Telah Menggunakan Bot Kami
 │└────────────┈ ⳹
-┊   「 *U s e r  I n f o 克* 」
+┊   「 *U s e r * 」
 ┊↬✗• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
 ┊↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
 ┊↬✗• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
 ┊↬✗• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
 ┗–––––––––––––––––✥
 ┌–––––––––––––––––✥
-┊   「 *S t a t u s  I n f o 比* 」
+┊   「 *S t a t u s * 」
 ┊↬✗• *ᴜᴘᴛɪᴍᴇ:* ${mpt}
 ┊↬✗• *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
 ┊↬✗• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
@@ -776,7 +769,7 @@ ptt: false, seconds: 0,contextInfo: {
 
     // minus info-tqto.js dan info-script.js tetep di enc, karena banyak yang menghapus credit + script
     // kalau masih kekeh semua no enc 35k aja om
-const _0x268735=_0x31f2;(function(_0x26997d,_0x7333c0){const _0x19a8ff=_0x31f2,_0x3d036=_0x26997d();while(!![]){try{const _0x33a406=parseInt(_0x19a8ff(0x133))/0x1+parseInt(_0x19a8ff(0x151))/0x2*(-parseInt(_0x19a8ff(0x155))/0x3)+-parseInt(_0x19a8ff(0x13f))/0x4+parseInt(_0x19a8ff(0x146))/0x5*(parseInt(_0x19a8ff(0x125))/0x6)+-parseInt(_0x19a8ff(0x12c))/0x7+-parseInt(_0x19a8ff(0x132))/0x8*(-parseInt(_0x19a8ff(0x134))/0x9)+-parseInt(_0x19a8ff(0x160))/0xa*(parseInt(_0x19a8ff(0x12f))/0xb);if(_0x33a406===_0x7333c0)break;else _0x3d036['push'](_0x3d036['shift']());}catch(_0x76a427){_0x3d036['push'](_0x3d036['shift']());}}}(_0x3bd1,0xde9ef));function _0x3bd1(){const _0x312f3f=['9MPGFNc','https://www.instagram.com/kabulsaputra21','send2ButtonVid','.menuv2','getRandom','Owner','ke7','https://www.instagram.com/kabulsaputra21/','Menu\x204','\x0aᴍᴀᴅᴇ\x20ᴡɪᴛʜ\x20\x20ʙʏ\x20','Jᴏɪɴ\x20Sɪɴɪ\x20Cᴜʏ','4044636dgfQtO','trim','Donasi','.menu','send2ButtonDoc','ke6','.owner','10xlXmue','https://telegra.ph/file/4ece0195006cf1bc508ea.mp4','ke8','send2ButtonLoc','\x0aᴍᴀᴅᴇ\x20ᴡɪᴛʜ\x20ʙʏ\x20','\x20Owner','┅────┅─❏\x20*MENU\x203*\x20❏─┅────┅\x0a','Menu','Menu\x202','send2ButtonImg','ke9','2fvbJAy','┅────┅─❏\x20*MENU\x2011*\x20❏─┅────┅','ke3','┅────┅─❏\x20*MENU\x208*\x20❏─┅────┅','2070801UbMeOx','.credit','send3ButtonImg','Speed','send3ButtonVid','chat','ke5','.owmer','buffer','┅────┅─❏\x20*MENU\x205*\x20❏─┅────┅\x0a','┅────┅─❏\x20*MENU\x2010*\x20❏─┅────┅','6964030RBUfZa','sendMessage','ke2','.donasi','┅────┅─❏\x20*MENU\x201*\x20❏─┅────┅\x0a','Menu\x208','┅────┅─❏\x20*MENU\x204*\x20❏─┅────┅\x0a','ke1','┅────┅─❏\x20*MENU\x207*\x20❏─┅────┅','5251602TaNXBz','Menu\x205','donasi','.speed','Sewa','https://telegra.ph/file/6dac1453cbc23bff8754a.mp4','\x20Donasi','1469762mwVVzJ','Menu\x203','ke10','11SyFAsS','┅────┅─❏\x20*MENU\x206*\x20❏─┅────┅','ke4','1684192jSGvPQ','1558592qvrEuh'];_0x3bd1=function(){return _0x312f3f;};return _0x3bd1();}let pusat=[_0x268735(0x123),'ke2','ke3',_0x268735(0x131),_0x268735(0x15b),_0x268735(0x144),'ke7','ke8',_0x268735(0x150),_0x268735(0x12e),'ke11'],pilih=pusat[_0x268735(0x138)]();pilih==_0x268735(0x123)&&await conn[_0x268735(0x143)](m[_0x268735(0x15a)],_0x268735(0x120),text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x14b),_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x12b),usedPrefix+'donasi',fkontak,fakefb);pilih==_0x268735(0x11e)&&await conn[_0x268735(0x149)](m[_0x268735(0x15a)],imgr+_0x268735(0x14e),'┅────┅─❏\x20*MENU\x202*\x20❏─┅────┅\x0a',text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x14b),_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x12b),usedPrefix+_0x268735(0x127),fkontak,fakefb);pilih==_0x268735(0x153)&&await conn[_0x268735(0x14f)](m[_0x268735(0x15a)],imgr+_0x268735(0x12d),_0x268735(0x14c),text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x14b),_0x268735(0x145),em['getRandom']()+_0x268735(0x12b),usedPrefix+'donasi',fkontak,fakefb);pilih==_0x268735(0x131)&&await conn[_0x268735(0x136)](m[_0x268735(0x15a)],imgr+_0x268735(0x13c),_0x268735(0x122),text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em['getRandom']()+'\x20Owner',_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x12b),usedPrefix+_0x268735(0x127),fkontak,fakefb);if(pilih==_0x268735(0x15b)){let buttons=[{'buttonText':{'displayText':em['getRandom']()+_0x268735(0x141)},'buttonId':_0x268735(0x11f)},{'buttonText':{'displayText':em[_0x268735(0x138)]()+'Owner'},'buttonId':_0x268735(0x145)},{'buttonText':{'displayText':em[_0x268735(0x138)]()+_0x268735(0x141)},'buttonId':'.menulist'}],msg=await conn[_0x268735(0x11d)](m[_0x268735(0x15a)],{'image':{'url':''+(imgr+_0x268735(0x126))},'caption':_0x268735(0x15e)+text['trim'](),'footer':botdate+'\x0a\x0a'+wm,'buttons':buttons},{'quoted':fkontak});conn[_0x268735(0x11d)](m[_0x268735(0x15a)],{'quoted':msg});}pilih==_0x268735(0x144)&&conn[_0x268735(0x157)](m[_0x268735(0x15a)],await ggenProfile(conn,m),_0x268735(0x130),text[_0x268735(0x140)]()+(nameown+'\x0a')+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x137),em['getRandom']()+'Owmer',_0x268735(0x15c),em[_0x268735(0x138)]()+_0x268735(0x158),_0x268735(0x128),fkontak);pilih==_0x268735(0x13a)&&conn[_0x268735(0x159)](m[_0x268735(0x15a)],'https://telegra.ph/file/ad296dd3ec7cd13a9893d.mp4',_0x268735(0x124),text[_0x268735(0x140)]()+(_0x268735(0x13d)+nameown+'\x0a')+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x142),em['getRandom']()+_0x268735(0x139),_0x268735(0x145),em[_0x268735(0x138)]()+'Credit',_0x268735(0x156),m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':'https://www.instagram.com/kabulsaputra21/','mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':wm,'thumbnail':await(await fetch(zykomd))[_0x268735(0x15d)](),'sourceUrl':sig}}});pilih==_0x268735(0x148)&&conn['sendButtonImg'](m['chat'],imgr+_0x268735(0x121),_0x268735(0x154),text['trim']()+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x12b),_0x268735(0x11f),fkontak,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':_0x268735(0x13b),'mediaType':0x2,'description':sgc,'title':_0x268735(0x13e),'body':wm,'thumbnail':await(await fetch(zykomd))[_0x268735(0x15d)](),'sourceUrl':sig}}});pilih=='ke9'&&conn[_0x268735(0x159)](m['chat'],'https://telegra.ph/file/1fb94fb0db4d9db149ad7.mp4','┅────┅─❏\x20*MENU\x209*\x20❏─┅────┅',text[_0x268735(0x140)]()+('\x0aᴍᴀᴅᴇ\x20ᴡɪᴛʜ\x20\x20ʙʏ\x20'+nameown+'\x0a')+botdate,em['getRandom']()+'Menu',_0x268735(0x142),em[_0x268735(0x138)]()+_0x268735(0x139),_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x129),'.sewa',m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':'https://www.instagram.com/kabulsaputra21/','mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':wm,'thumbnail':await(await fetch(zykomd))['buffer'](),'sourceUrl':sig}}});function _0x31f2(_0x39d185,_0x26ba2e){const _0x3bd156=_0x3bd1();return _0x31f2=function(_0x31f263,_0x514edb){_0x31f263=_0x31f263-0x11d;let _0x538d43=_0x3bd156[_0x31f263];return _0x538d43;},_0x31f2(_0x39d185,_0x26ba2e);}pilih==_0x268735(0x12e)&&conn[_0x268735(0x159)](m[_0x268735(0x15a)],_0x268735(0x12a),_0x268735(0x15f),text[_0x268735(0x140)]()+(_0x268735(0x14a)+nameown+'\x0a')+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x142),em[_0x268735(0x138)]()+_0x268735(0x139),'.owner',em[_0x268735(0x138)]()+'Speed',_0x268735(0x128),m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':_0x268735(0x13b),'mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':wm,'thumbnail':await(await fetch(zykomd))[_0x268735(0x15d)](),'sourceUrl':sig}}});pilih=='ke11'&&conn[_0x268735(0x159)](m['chat'],_0x268735(0x147),_0x268735(0x152),text[_0x268735(0x140)]()+'\x0a'+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x142),em['getRandom']()+'Owner',_0x268735(0x145),em['getRandom']()+'Credit','.credit',m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':_0x268735(0x135),'mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':bottime,'thumbnail':await(await fetch(zykomd))['buffer'](),'sourceUrl':sig}}});
+const _0x268735=_0x31f2;(function(_0x26997d,_0x7333c0){const _0x19a8ff=_0x31f2,_0x3d036=_0x26997d();while(!![]){try{const _0x33a406=parseInt(_0x19a8ff(0x133))/0x1+parseInt(_0x19a8ff(0x151))/0x2*(-parseInt(_0x19a8ff(0x155))/0x3)+-parseInt(_0x19a8ff(0x13f))/0x4+parseInt(_0x19a8ff(0x146))/0x5*(parseInt(_0x19a8ff(0x125))/0x6)+-parseInt(_0x19a8ff(0x12c))/0x7+-parseInt(_0x19a8ff(0x132))/0x8*(-parseInt(_0x19a8ff(0x134))/0x9)+-parseInt(_0x19a8ff(0x160))/0xa*(parseInt(_0x19a8ff(0x12f))/0xb);if(_0x33a406===_0x7333c0)break;else _0x3d036['push'](_0x3d036['shift']());}catch(_0x76a427){_0x3d036['push'](_0x3d036['shift']());}}}(_0x3bd1,0xde9ef));function _0x3bd1(){const _0x312f3f=['9MPGFNc','https://www.instagram.com/Miskawatydihuma','send2ButtonVid','.menuv2','getRandom','Owner','ke7','https://www.instagram.com/Miskawatydihuma','Menu\x204','\x0aᴍᴀᴅᴇ\x20ᴡɪᴛʜ\x20\x20ʙʏ\x20','Jᴏɪɴ\x20Sɪɴɪ\x20Cᴜʏ','4044636dgfQtO','trim','Donasi','.menu','send2ButtonDoc','ke6','.owner','10xlXmue','https://telegra.ph/file/4ece0195006cf1bc508ea.mp4','ke8','send2ButtonLoc','\x0aᴍᴀᴅᴇ\x20ᴡɪᴛʜ\x20ʙʏ\x20','\x20Owner','┅────┅─❏\x20*MENU\x203*\x20❏─┅────┅\x0a','Menu','Menu\x202','send2ButtonImg','ke9','2fvbJAy','┅────┅─❏\x20*MENU\x2011*\x20❏─┅────┅','ke3','┅────┅─❏\x20*MENU\x208*\x20❏─┅────┅','2070801UbMeOx','.credit','send3ButtonImg','Speed','send3ButtonVid','chat','ke5','.owmer','buffer','┅────┅─❏\x20*MENU\x205*\x20❏─┅────┅\x0a','┅────┅─❏\x20*MENU\x2010*\x20❏─┅────┅','6964030RBUfZa','sendMessage','ke2','.donasi','┅────┅─❏\x20*MENU\x201*\x20❏─┅────┅\x0a','Menu\x208','┅────┅─❏\x20*MENU\x204*\x20❏─┅────┅\x0a','ke1','┅────┅─❏\x20*MENU\x207*\x20❏─┅────┅','5251602TaNXBz','Menu\x205','donasi','.speed','Sewa','https://telegra.ph/file/6dac1453cbc23bff8754a.mp4','\x20Donasi','1469762mwVVzJ','Menu\x203','ke10','11SyFAsS','┅────┅─❏\x20*MENU\x206*\x20❏─┅────┅','ke4','1684192jSGvPQ','1558592qvrEuh'];_0x3bd1=function(){return _0x312f3f;};return _0x3bd1();}let pusat=[_0x268735(0x123),'ke2','ke3',_0x268735(0x131),_0x268735(0x15b),_0x268735(0x144),'ke7','ke8',_0x268735(0x150),_0x268735(0x12e),'ke11'],pilih=pusat[_0x268735(0x138)]();pilih==_0x268735(0x123)&&await conn[_0x268735(0x143)](m[_0x268735(0x15a)],_0x268735(0x120),text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x14b),_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x12b),usedPrefix+'donasi',fkontak,fakefb);pilih==_0x268735(0x11e)&&await conn[_0x268735(0x149)](m[_0x268735(0x15a)],imgr+_0x268735(0x14e),'┅────┅─❏\x20*MENU\x202*\x20❏─┅────┅\x0a',text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x14b),_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x12b),usedPrefix+_0x268735(0x127),fkontak,fakefb);pilih==_0x268735(0x153)&&await conn[_0x268735(0x14f)](m[_0x268735(0x15a)],imgr+_0x268735(0x12d),_0x268735(0x14c),text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x14b),_0x268735(0x145),em['getRandom']()+_0x268735(0x12b),usedPrefix+'donasi',fkontak,fakefb);pilih==_0x268735(0x131)&&await conn[_0x268735(0x136)](m[_0x268735(0x15a)],imgr+_0x268735(0x13c),_0x268735(0x122),text[_0x268735(0x140)]()+'\x0a\x0a'+botdate+'\x0a\x0a'+wm,em['getRandom']()+'\x20Owner',_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x12b),usedPrefix+_0x268735(0x127),fkontak,fakefb);if(pilih==_0x268735(0x15b)){let buttons=[{'buttonText':{'displayText':em['getRandom']()+_0x268735(0x141)},'buttonId':_0x268735(0x11f)},{'buttonText':{'displayText':em[_0x268735(0x138)]()+'Owner'},'buttonId':_0x268735(0x145)},{'buttonText':{'displayText':em[_0x268735(0x138)]()+_0x268735(0x141)},'buttonId':'.menulist'}],msg=await conn[_0x268735(0x11d)](m[_0x268735(0x15a)],{'image':{'url':''+(imgr+_0x268735(0x126))},'caption':_0x268735(0x15e)+text['trim'](),'footer':botdate+'\x0a\x0a'+wm,'buttons':buttons},{'quoted':fkontak});conn[_0x268735(0x11d)](m[_0x268735(0x15a)],{'quoted':msg});}pilih==_0x268735(0x144)&&conn[_0x268735(0x157)](m[_0x268735(0x15a)],await ggenProfile(conn,m),_0x268735(0x130),text[_0x268735(0x140)]()+(nameown+'\x0a')+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x137),em['getRandom']()+'Owmer',_0x268735(0x15c),em[_0x268735(0x138)]()+_0x268735(0x158),_0x268735(0x128),fkontak);pilih==_0x268735(0x13a)&&conn[_0x268735(0x159)](m[_0x268735(0x15a)],'https://telegra.ph/file/ad296dd3ec7cd13a9893d.mp4',_0x268735(0x124),text[_0x268735(0x140)]()+(_0x268735(0x13d)+nameown+'\x0a')+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x142),em['getRandom']()+_0x268735(0x139),_0x268735(0x145),em[_0x268735(0x138)]()+'Credit',_0x268735(0x156),m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':'https://www.instagram.com/kabulsaputra21/','mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':wm,'thumbnail':await(await fetch(zykomd))[_0x268735(0x15d)](),'sourceUrl':sig}}});pilih==_0x268735(0x148)&&conn['sendButtonImg'](m['chat'],imgr+_0x268735(0x121),_0x268735(0x154),text['trim']()+botdate+'\x0a\x0a'+wm,em[_0x268735(0x138)]()+_0x268735(0x12b),_0x268735(0x11f),fkontak,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':_0x268735(0x13b),'mediaType':0x2,'description':sgc,'title':_0x268735(0x13e),'body':wm,'thumbnail':await(await fetch(zykomd))[_0x268735(0x15d)](),'sourceUrl':sig}}});pilih=='ke9'&&conn[_0x268735(0x159)](m['chat'],'https://telegra.ph/file/1fb94fb0db4d9db149ad7.mp4','┅────┅─❏\x20*MENU\x209*\x20❏─┅────┅',text[_0x268735(0x140)]()+('\x0aᴍᴀᴅᴇ\x20ᴡɪᴛʜ\x20\x20ʙʏ\x20'+nameown+'\x0a')+botdate,em['getRandom']()+'Menu',_0x268735(0x142),em[_0x268735(0x138)]()+_0x268735(0x139),_0x268735(0x145),em[_0x268735(0x138)]()+_0x268735(0x129),'.sewa',m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':'https://www.instagram.com/kabulsaputra21/','mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':wm,'thumbnail':await(await fetch(zykomd))['buffer'](),'sourceUrl':sig}}});function _0x31f2(_0x39d185,_0x26ba2e){const _0x3bd156=_0x3bd1();return _0x31f2=function(_0x31f263,_0x514edb){_0x31f263=_0x31f263-0x11d;let _0x538d43=_0x3bd156[_0x31f263];return _0x538d43;},_0x31f2(_0x39d185,_0x26ba2e);}pilih==_0x268735(0x12e)&&conn[_0x268735(0x159)](m[_0x268735(0x15a)],_0x268735(0x12a),_0x268735(0x15f),text[_0x268735(0x140)]()+(_0x268735(0x14a)+nameown+'\x0a')+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x142),em[_0x268735(0x138)]()+_0x268735(0x139),'.owner',em[_0x268735(0x138)]()+'Speed',_0x268735(0x128),m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':_0x268735(0x13b),'mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':wm,'thumbnail':await(await fetch(zykomd))[_0x268735(0x15d)](),'sourceUrl':sig}}});pilih=='ke11'&&conn[_0x268735(0x159)](m['chat'],_0x268735(0x147),_0x268735(0x152),text[_0x268735(0x140)]()+'\x0a'+botdate,em[_0x268735(0x138)]()+_0x268735(0x14d),_0x268735(0x142),em['getRandom']()+'Owner',_0x268735(0x145),em['getRandom']()+'Credit','.credit',m,{'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':_0x268735(0x135),'mediaType':0x2,'description':sgc,'title':'Follow\x20Lah\x20Cᴜʏ!!!','body':bottime,'thumbnail':await(await fetch(zykomd))['buffer'](),'sourceUrl':sig}}});
    /* conn.send3ButtonVid(m.chat, 'https://telegra.ph/file/ad296dd3ec7cd13a9893d.mp4', '┅────┅─❏ *𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃* ❏─┅────┅', text.trim() + `\nᴍᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ ${nameown}\n` + botdate, 'Menu', '.menu', 'Owner', '.owner', 'Credit', '.credit', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: sig,
     mediaType: 2, 
