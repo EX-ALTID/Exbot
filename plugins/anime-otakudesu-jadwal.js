@@ -4,8 +4,9 @@ import { apivisit } from './kanghit.js'
 
 let handler = async (m, { conn, usedPrefix }) => {
   //  let res = (await axios.get(API('can', '/api/anime/otakudesu/jadwal'))).data;
-    let res = (await fetch('https://pnggilajacn.my.id/api/anime/otakudesu/jadwal')).data;
-    if (res.status != 200) throw res.message;
+  let res = (await axios.get('https://pnggilajacn.my.id/api/anime/otakudesu/jadwal')).data;
+//    let res = (await fetch('https://pnggilajacn.my.id/api/anime/otakudesu/jadwal')).data;
+  //  if (res.status != 200) throw res.message;
     if (!res) throw res.message;
     let v = res.scheduleList
     let sections = []

@@ -5,7 +5,7 @@ import { apivisit } from './kanghit.js'
 let handler = async (m, { conn, usedPrefix, args }) => {
     if (!args[0]) throw `Id?`
 //    let res = (await axios.get(API('can', '/api/anime/nekopoi/detail', { id: args[0] } ))).data;
-    let res = (await fetch('https://pnggilajacn.my.id/api/anime/nekopio/detail', { id: args[0] } )).data;
+    let res = (await axios.get(`https://pnggilajacn.my.id/api/anime/nekopoi/detail?id=${args[0]}`)).data;
     if (res.status != 200) throw res.message;
     if (!res) throw res.message;
     try {

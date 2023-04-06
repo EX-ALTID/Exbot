@@ -16,7 +16,7 @@ export async function before(m, { match, usedPrefix, command }) {
 		let som = sim * 100
 		let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 		let name = await conn.getName(who)
-		let caption = `👋 Hallo @${who.split("@")[0]},\n\nApakah Kamu mencari *${usedPrefix + mean}* ?\n\nHasil Kemiripan ➲ *${parseInt(som)}%*\n\nBot by http://ī.am/𝕬𝖑𝖉𝖎𝕲𝖆𝖓𝖟`
+		let caption = `👋 Hallo @${who.split("@")[0]},\n\nApakah Kamu mencari *${usedPrefix + mean}* ?\n\nHasil Kemiripan ➲ *${parseInt(som)}%*`
 	if (mean) this.sendButton(m.chat, bottime, caption, `${flaaa2 + 'Apakah Benar?'}`, [[em.getRandom() + 'IYA BENAR', `${usedPrefix + mean} ${text}`], [em.getRandom() + 'TIDAK BENAR', usedPrefix + '?']], m, { mentions: this.parseMention(caption) })
 	}
 }

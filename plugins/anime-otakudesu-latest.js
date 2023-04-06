@@ -4,9 +4,9 @@ import { apivisit } from './kanghit.js'
 
 let handler = async (m, { conn, usedPrefix, args }) => {
     let page = args[0] || `1`
-  //  let res = (await axios.get(API('can', '/api/anime/otakudesu/latest', { page: page } ))).data;
-    let res = (await fetch('https://pnggilajacn.my.id/api/anime/otakudesu/latest', { page: page } )).data;
-    if (res.status != 200) throw res.message;
+    let res = (await axios.get(API('can', '/api/anime/otakudesu/latest', { page: page } ))).data;
+   // let res = (await fetch('https://pnggilajacn.my.id/api/anime/otakudesu/latest', { page: page } )).data;
+   // if (res.status != 200) throw res.message;
     if (!res) throw res.message;
     let v = res.animeList
 	let arr = []
